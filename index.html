@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>study-guide</title>
-</head>
-<body>
-    <!-- Расположить навигационную панель в правильном стиле -->
-    <header> 
-        <a href="#">
-            <img src="img/logo.jpg" alt="website-logo" class="test-icon">
-            <span>website-name</span>
-        </a>
-        <nav>
-            <ul>
-                <li>
-                    HTML
-                </li>
-                <li>
-                    CSS
-                </li>
-                <li>
-                    JavaScript
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Она должна идти (слева-направо) лого -> название -> по левому краю варвненный список -->
-    <script></script>
-    <main></main>
-    <footer></footer>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>study-guide</title>
+    </head>
+    <body>
+        <!-- Расположить навигационную панель в правильном стиле -->
+        <header> 
+            <div class="logo-container"> <!-- Обернули логотип и название в div с классом logo-container -->
+                <a href="#">
+                    <img src="img/logo.jpg" alt="website-logo" class="test-icon">
+                    <span class="website-name">website-name</span>
+                </a>
+            </div>
+            <nav class="navbar-button">
+                <ul class="button-list"> <!-- Добавили класс для списка кнопок -->
+                    <li>
+                        <a href="#">HTML</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS</a>
+                    </li>
+                    <li>
+                        <a href="#">JavaScript</a>
+                    </li>
+                    
+
+                </ul>
+            </nav>
+        </header>
+        <!-- Она должна идти (слева-направо) лого -> название -> по левому краю варвненный список -->
+        <script></script>
+        <main></main>
+        <footer></footer>
+    
+    </body>
+
+
+
+
 </body>
 </html>

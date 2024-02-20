@@ -1,41 +1,181 @@
 /* Ссылки на шрифты */
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 
 /* Основные переменные */
 
 :root {
-  --main-color: #7c4dff;
-  --secondary-color: #0099ff;
-  --white-color: #ffffff;
-  --bg-color: #202542;
-  --gradient: linear-gradient(var --secondary-color, var --main-color);/* Линейный градиент фиолетовый-бирюзовый */
+  --main-color: #7c4dff;             /* Основной цвет */
+  --secondary-color: #0099ff;        /* Вторичный цвет */
+  --white-color: #ffffff;            /* Белый цвет */
+  --bg-color: #202542;               /* Цвет фона */
+  --gradient: linear-gradient(var --secondary-color, var --main-color); /* Линейный градиент фона */
 }
 
+/* Общие стили */
 
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
-}
-
-/* Кастомный скролл */
-
-html::-webkit-scrollbar {
-  width: 0.5rem;
-}
-html::-webkit-scrollbar-track {
-  background: transparent;
-}
-html::-webkit-scrollbar-thumb {
-  background: var(--main-color);
-  border-radius: 5rem;
+  font-family: 'Montserrat', sans-serif; /* Применение шрифта Montserrat */
 }
 
 /* Стилистика навбара */
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 10px 20px;
+}
+
+
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px; 
+}
+
+
+
+
+
+/* Стили для логотипа и названия сайта */
+.logo-container {
+  margin-left: 110px;
+  display: flex;
+  align-items: center;
+}
+
 .test-icon {
   width: 50px;
+  margin-right: 10px; /* Добавлено для отступа между логотипом и текстом */
+}
+
+.website-name {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+/* Стили для футера */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #202542;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+/* Стили для социальных ссылок в футере */
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #7c4dff;
+}
+
+
+
+
+/*Стили для списка с темами*/
+
+
+
+/* Стили для кнопок */
+
+.button-list
+{
+  margin-right: 110px;
+  margin-top: 10px;
+
+}
+
+.button-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Добавлен отступ между кнопками */
+  margin-left: 62px;
+  
+}
+
+.button-list li a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 21px;
+  position: relative; /* Позволяет позиционировать вертикальную полосу */
+  padding-left: 15px; /* Добавлен отступ слева от текста кнопки */
+}
+
+.button-list li a::before {
+  content: '';
+  position: absolute;
+  top: 50%; /* Положение полосы по середине по вертикали */
+  transform: translateY(-50%); /* Смещение на половину высоты элемента */
+  left: 0;
+  width: 4px; /* Ширина вертикальной полосы */
+  height: 40px;
+  background-color: transparent; /* Цвет по умолчанию */
+}
+
+.button-list li:nth-child(1) a::before {
+  background-color: #db4130; /* Цвет для кнопки HTML */
+}
+
+.button-list li:nth-child(2) a::before {
+  background-color: #188ddb; /* Цвет для кнопки CSS */
+}
+
+.button-list li:nth-child(3) a::before {
+  background-color: #d3d61c; /* Цвет для кнопки JavaScript */
 }
