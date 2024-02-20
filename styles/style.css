@@ -10,7 +10,7 @@
   --secondary-color: #0099ff;
   --white-color: #ffffff;
   --bg-color: #202542;
-  --gradient: linear-gradient(var --secondary-color, var --main-color);/* Линейный градиент фиолетовый-бирюзовый */
+  --gradient: linear-gradient(var(--secondary-color), var(--main-color));/* Линейный градиент фиолетовый-бирюзовый */
 }
 
 
@@ -34,7 +34,43 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
-/* Стилистика навбара */
+/* Стилизация навбара */
+
+.guide-image {
+    width: 270px;
+}
+
+/* Стилизация блока  */
+
+.info-about-guides {
+    background-image: url("../img/hexagon.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 187%;
+}
+
+/* Стилизация сетки с столбцами */
+
+.columns {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    justify-items: center;
+}
+
+/* Стилизация столбцов в сетке */
+
+.column {
+    padding: 20px;
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    text-align: left; 
+}
 
 .test-icon {
   width: 50px;
