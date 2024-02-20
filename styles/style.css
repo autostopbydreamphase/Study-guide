@@ -47,7 +47,7 @@ html::-webkit-scrollbar-thumb {
  }
 /* Контейнер с лого и начальным текстом */
 .logo-quote { 
-  background: url(img/body-bg.svg);
+  background: url(../img/body-bg.svg);
   background-blend-mode: soft-light;
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,5 +91,5 @@ html::-webkit-scrollbar-thumb {
 
 
 .textBox::after {
-  background-image: url(img/loupe.svg)
+  background-image: url(../img/loupe.svg);
 }
