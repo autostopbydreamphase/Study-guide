@@ -39,3 +39,10 @@ html::-webkit-scrollbar-thumb {
 .test-icon {
   width: 50px;
 }
+
+main {
+  background-image: url(img/solid-bg-dark-ui.svg);
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
