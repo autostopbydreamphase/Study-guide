@@ -10,7 +10,7 @@
   --secondary-color: #0099ff;
   --white-color: #ffffff;
   --bg-color: #202542;
-  --gradient: linear-gradient(var --secondary-color, var --main-color);/* Линейный градиент фиолетовый-бирюзовый */
+  --gradient: linear-gradient(var(--secondary-color), var(--main-color));/* Линейный градиент фиолетовый-бирюзовый */
 }
 
 
