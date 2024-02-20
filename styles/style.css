@@ -36,13 +36,45 @@ html::-webkit-scrollbar-thumb {
 
 /* Стилистика навбара */
 
+
+
+
 .test-icon {
   width: 50px;
 }
 
-main {
-  background-image: url(img/solid-bg-dark-ui.svg);
+/* Контейнер с лого и начальным текстом */
+.logo-quote { 
+  width: auto;
+  background-image: url(img/body-bg.svg);
   background-blend-mode: soft-light;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #202542;
+  color: #fff;
+  padding: 12rem 10rem;
+}
+
+/* Лого */
+.website-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+/* Начальный текст */
+.main-text {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.625;
+  font-size: 2.5rem !important;
+  text-align: center !important;
+
 }
