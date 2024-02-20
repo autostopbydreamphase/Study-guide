@@ -1,41 +1,258 @@
-/* Ссылки на шрифты */
+/* Стили для ссылок на шрифты: импортируют шрифт Montserrat для использования на веб-сайте. */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
-
-/* Основные переменные */
-
+/* Определение основных переменных: устанавливают основные цвета и градиент для веб-сайта. */
 :root {
-  --main-color: #7c4dff;
-  --secondary-color: #0099ff;
-  --white-color: #ffffff;
-  --bg-color: #202542;
-  --gradient: linear-gradient(var --secondary-color, var --main-color);/* Линейный градиент фиолетовый-бирюзовый */
+    --main-color: #7c4dff; 
+    --secondary-color: #0099ff; 
+    --white-color: #ffffff; 
+    --bg-color: #202542; 
+    --gradient: linear-gradient(var(--secondary-color), var(--main-color)); 
 }
 
-
+/* Общие стили: устанавливают общие свойства для всех элементов. */
 * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+    text-decoration: none; 
+    font-family: 'Montserrat', sans-serif; 
+    color: var(--white-color); 
 }
 
-/* Кастомный скролл */
-
-html::-webkit-scrollbar {
-  width: 0.5rem;
-}
-html::-webkit-scrollbar-track {
-  background: transparent;
-}
-html::-webkit-scrollbar-thumb {
-  background: var(--main-color);
-  border-radius: 5rem;
+/* Стилистика навбара: определяют внешний вид навигационного меню. */
+header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 10px 20px;
 }
 
-/* Стилистика навбара */
+/* Контейнер для логотипа: устанавливает расположение логотипа в навбаре. */
+.logo-container {
+  display: flex; 
+  align-items: center; 
+}
 
+/* Иконка теста: устанавливает размер и отступы для иконки. */
 .test-icon {
-  width: 50px;
+  width: 50px; 
+  margin-right: 10px;
+}
+
+/* Название веб-сайта: устанавливает размер шрифта для названия веб-сайта. */
+.website-name {
+  font-size: 20px;
+}
+
+/* Навигационное меню: определяет стили для списка навигационного меню. */
+nav ul {
+  display: flex; 
+  list-style: none; 
+  margin-right: 20px; 
+}
+
+/* Элементы навигационного меню: определяют стили для отдельных элементов списка навигации. */
+nav ul li {
+  margin-left: 20px; 
+}
+
+/* Первый элемент навигационного меню: устанавливает отступ для первого элемента списка навигации. */
+nav ul li:first-child {
+  margin-left: auto; 
+}
+
+/* Стили для ссылок в навигации: определяют внешний вид ссылок в навигационном меню. */
+nav ul li a {
+  color: var(--white-color); 
+  text-decoration: none; 
+  font-weight: bold; 
+  font-size: 18px; 
+}
+
+/* Список кнопок: определяет стили для списка кнопок. */
+.button-list {
+  margin-right: 0; 
+  margin-top: -10px; 
+}
+
+/* Элементы списка кнопок: устанавливают стили для отдельных элементов списка кнопок. */
+.button-list li {
+  margin-top: -10px; 
+}
+
+/* Стили для ссылок кнопок: определяют внешний вид ссылок кнопок. */
+.button-list li a {
+  color: var(--white-color);
+  text-decoration: none; 
+  font-size: 18px; 
+  position: relative; 
+  padding-left: 15px; 
+}
+
+/* Вертикальная полоса перед текстом кнопок: определяет стили для вертикальной полосы. */
+.button-list li a::before {
+  content: ''; 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 4px;
+  height: 40px;
+  background-color: transparent;
+}
+
+/* Цвет вертикальной полосы для кнопки HTML */
+.button-list li:nth-child(1) a::before {
+  background-color: #db4130;
+}
+
+/* Цвет вертикальной полосы для кнопки CSS */
+.button-list li:nth-child(2) a::before {
+  background-color: #188ddb;
+}
+
+/* Цвет вертикальной полосы для кнопки JavaScript */
+.button-list li:nth-child(3) a::before {
+  background-color: #d3d61c;
+}
+
+/* Стили для футера: определяют внешний вид и расположение футера на веб-сайте. */
+.footer-bs {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: #3c3d41;
+    padding: 60px 40px; 
+    color: rgba(255,255,255,1.00); 
+    border-bottom-right-radius: 6px; 
+    border-top-left-radius: 0px; 
+    border-bottom-left-radius: 6px; 
+}
+
+/* Стили для разделов внутри футера: определяют внешний вид и структуру разделов. */
+.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns {
+    padding: 10px 25px; 
+}
+
+/* Убираем границы между разделами футера */
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns {
+    border-color: transparent;
+}
+
+/* Заголовок бренда в футере: определяет стили для заголовка бренда. */
+.footer-bs .footer-brand h2 {
+    margin: 0px 0px 10px; 
+}
+
+/* Текст бренда в футере: определяет стили для текста бренда. */
+.footer-bs .footer-brand p {
+    font-size: 12px; /* Размер шрифта для текста бренда */
+    color: rgba(255,255,255,0.70); 
+}
+
+/* Список страниц в футере: определяет стили для списка страниц в футере. */
+.footer-bs .footer-nav ul.pages {
+    list-style: none; 
+    padding: 0px; 
+}
+
+/* Элементы списка страниц в футере: определяют стили для отдельных элементов списка страниц. */
+.footer-bs .footer-nav ul.pages li {
+    padding: 5px 0px; 
+}
+
+/* Ссылки на страницы в футере: определяют стили для ссылок на страницы в футере. */
+.footer-bs .footer-nav ul.pages a {
+    color: rgba(255,255,255,1.00); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+}
+
+/* При наведении на ссылки на страницы в футере: определяет стили при наведении на ссылки. */
+.footer-bs .footer-nav ul.pages a:hover {
+    color: rgba(255,255,255,0.80); 
+    text-decoration: none; 
+}
+
+/* Заголовок раздела навигации в футере: определяет стили для заголовка раздела навигации. */
+.footer-bs .footer-nav h4 {
+    font-size: 11px; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    margin-bottom: 10px; 
+}
+
+/* Список ссылок в разделе навигации в футере: определяет стили для списка ссылок. */
+.footer-bs .footer-nav ul.list {
+    list-style: none; 
+    padding: 0px; 
+}
+
+/* Элементы списка ссылок в разделе навигации в футере: определяют стили для отдельных элементов списка ссылок. */
+.footer-bs .footer-nav ul.list li {
+    padding: 5px 0px; 
+}
+
+/* Ссылки в разделе навигации в футере: определяют стили для ссылок в разделе навигации. */
+.footer-bs .footer-nav ul.list a {
+    color: rgba(255,255,255,0.80); 
+}
+
+/* При наведении на ссылки в разделе навигации в футере: определяет стили при наведении на ссылки. */
+.footer-bs .footer-nav ul.list a:hover {
+    color: rgba(255,255,255,0.60); 
+    text-decoration: none; 
+}
+
+/* Список социальных ссылок в футере: определяет стили для списка социальных ссылок. */
+.footer-bs .footer-social ul {
+    list-style: none; 
+    padding: 0px; 
+}
+
+/* Заголовок раздела социальных ссылок в футере: определяет стили для заголовка раздела социальных ссылок. */
+.footer-bs .footer-social h4 {
+    font-size: 11px; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+}
+
+/* Элементы списка социальных ссылок в футере: определяют стили для отдельных элементов списка социальных ссылок. */
+.footer-bs .footer-social li {
+    padding: 5px 4px; 
+}
+
+/* Ссылки в разделе социальных ссылок в футере: определяют стили для ссылок в разделе социальных ссылок. */
+.footer-bs .footer-social a {
+    color: rgba(255,255,255,1.00); 
+}
+
+/* При наведении на ссылки в разделе социальных ссылок в футере: определяет стили при наведении на ссылки. */
+.footer-bs .footer-social a:hover {
+    color: rgba(255,255,255,0.80); /* Цвет текста ссылок при наведении */
+    text-decoration: none; 
+}
+
+/* Заголовок раздела NS в футере: определяет стили для заголовка раздела NS. */
+.footer-bs .footer-ns h4 {
+    font-size: 11px; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    margin-bottom: 10px; 
+}
+
+/* Текст раздела NS в футере: определяет стили для текста раздела NS. */
+.footer-bs .footer-ns p {
+    font-size: 12px; 
+    color: rgba(255,255,255,0.70); 
+}
+
+/* Медиа-запрос для широких экранов: определяет стили для широких экранов. */
+@media (min-width: 768px) {
+    .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns {
+        border-left: solid 1px rgba(255,255,255,0.10); 
+    }
 }
