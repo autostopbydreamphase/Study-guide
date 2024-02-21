@@ -256,3 +256,15 @@ html::-webkit-scrollbar-thumb {
   color: #fff;
   text-align: left !important;
 }
+
+.HTML-title {
+  color: #ff5757;
+}
+
+.CSS-title {
+  color: #4ba2fee5;
+}
+
+.JS-title {
+  color: #f6ff46;
+}
