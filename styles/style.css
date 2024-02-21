@@ -16,30 +16,198 @@
   ); /* Линейный градиент фиолетовый-бирюзовый */
 }
 
+
+/* Общие стили: устанавливают общие свойства для всех элементов. */
 * {
   margin: 0;
   padding: 0;
   list-style: none;
+
   text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  background: #fff;
+}
+html,
+body {
+  background: var(--bg-color);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* Стилистика навбара: определяют внешний вид навигационного меню. */
+
+.main-content {
+  min-height: calc(100% - 100px);
+  padding-bottom: 0px;
+  box-sizing: border-box;
+}
+
+/* Стилизация навбара */
+
+.guide-image {
+  width: 350px;
+}
+
+/* Стилизация блока  */
+
+.container {
+  width: 80%;  
+  margin: 0 auto; /* Центрируем контейнер по горизонтали */
+  padding: 20px; /* Отступы со всех сторон */
+  box-sizing: border-box; /* Учитываем отступы внутри ширины контейнера */
+}
+
+.info-about-guides {
+  background-image: url("../img/hexagon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 187%;
+}
+
+/* Стилизация сетки с столбцами */
+
+.horizontal-line {
+  box-shadow: none;
+  background-color: rgba(98, 98, 98, 0.1) ;
+  height: 2px;
+  border: none;
+}
+
+.columns {
+  width: 100%;
+  max-width: 1250px;
+  max-height: 370px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 390px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Стилизация столбцов в сетке */
+
+.column {
+  padding: 20px;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  text-align: left;
+}
+
+/* Стилистика навбара */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 20px 15px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li:first-child {
+  margin-left: 0;
+}
+nav ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+}
+/* Стили для логотипа и названия сайта */
+.logo-container {
+  margin-left: 110px;
+  display: flex;
+  align-items: center;
+}
+.test-icon {
+  width: 50px;
+  margin-right: 10px; /* Добавлено для отступа между логотипом и текстом */
+}
+.website-name {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.logo-container a {
+  display: flex;
+  align-items: center;
+}
+/* Стили для социальных ссылок в футере */
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.social-links a:hover {
+  color: #7c4dff;
+}
+/* Стили для кнопок */
+.header-button-list {
+  margin-right: 110px;
+  margin-top: 10px;
+}
+.header-button-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Добавлен отступ между кнопками */
+  margin-left: 62px;
+}
+.header-button-list li a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 21px;
+  position: relative; /* Позволяет позиционировать вертикальную полосу */
+  padding-left: 15px; /* Добавлен отступ слева от текста кнопки */
+}
+.header-button-list li a::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* Положение полосы по середине по вертикали */
+  transform: translateY(-50%); /* Смещение на половину высоты элемента */
+  left: 0;
+  width: 4px; /* Ширина вертикальной полосы */
+  height: 40px;
+  background-color: transparent; /* Цвет по умолчанию */
+}
+.header-button-list li:nth-child(1) a::before {
+  background-color: #db4130; /* Цвет для кнопки HTML */
+}
+.header-button-list li:nth-child(2) a::before {
+  background-color: #188ddb; /* Цвет для кнопки CSS */
+}
+.header-button-list li:nth-child(3) a::before {
+  background-color: #d3d61c; /* Цвет для кнопки JavaScript */
 }
 
 /* Кастомный скролл */
 
 html::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.27rem;
 }
 html::-webkit-scrollbar-track {
   background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-  background: var(--main-color);
-  border-radius: 5rem;
-}
-
-/* Стилистика навбара */
-
-.test-icon {
-  width: 50px;
+  background: #fff;
+  border-radius: 10rem;
 }
 
 /* Контейнер с лого и начальным текстом */
@@ -48,7 +216,7 @@ html::-webkit-scrollbar-thumb {
   background-blend-mode: soft-light;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #202542;
+  background-color: var(--bg-color);
   color: #fff;
   width: auto;
   padding: 12rem 10rem;
@@ -79,24 +247,13 @@ html::-webkit-scrollbar-thumb {
 
 /* Поле для ввода текста */
 .textBox {
-  background-color: rgba(1, 1, 1, 0.5);
+
+  background-color: rgba(1, 1, 1, 0.325);
   border-radius: 5rem;
   padding: 1rem;
+  font-size: 1.35em;
   width: 33%;
   font-family: "Montserrat", sans-serif;
   color: #fff;
   text-align: left !important;
-  font-size: 4;
-  /* background-size: 10px;
-  background-repeat: no-repeat;
-  outline: none; */
 }
-
-/* #search {
-  width: 20px;
-  background-color: rgba(1,1,1,.5);
-  margin-top: 20px;
-  border: none; 
-  background: url(../img/loupe.svg);
-  background-repeat: no-repeat;
-} */

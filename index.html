@@ -1,49 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <title>study-guide</title>
-  </head>
 
-  <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>study-guide</title>
+</head>
+
+<body>
     <!-- Расположить навигационную панель в правильном стиле -->
     <header>
-      <img src="img/logo.jpg" alt="website-logo" class="test-icon" />
-      <span>website-name</span>
-      <nav>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-      </nav>
+        <div class="logo-container"> <!-- Обернули логотип и название в div с классом logo-container -->
+            <a href="#">
+                <img src="img/logo.jpg" alt="website-logo" class="test-icon">
+                <span class="website-name">STUDY GUIDE</span>
+            </a>
+        </div>
+        <nav class="navbar-button">
+            <ul class="header-button-list"> <!-- Добавили класс для списка кнопок -->
+                <li>
+                    <a href="#">HTML</a>
+                </li>
+                <li>
+                    <a href="#">CSS</a>
+                </li>
+                <li>
+                    <a href="#">JavaScript</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <!-- Она должна идти (слева-направо) лого -> название -> по левому краю варвненный список -->
-    <script></script>
+
+    <!-- Скрипты для работы функционала сайта -->
+    <script>
+
+    </script>
+
+    <!-- Основная часть сборника -->
     <main>
-      <section class="logo-quote">
-        <div>
-          <img
-            class="website-logo"
-            src="img/logo.jpg"
-            alt="website-logo"
-            width="130px"
-          />
+
+        <div class="welcome-section">
+            <section class="logo-quote">
+                <div>
+                    <img class="website-logo" src="img/logo.jpg" alt="website-logo" width="130px">
+                </div>
+                <div>
+                    <p class="main-text">
+                        HTML, CSS, JavaScript
+                        <br>
+                        Учебное пособие для начинающих
+                    </p>
+                </div>
+                <div>
+                    <input class="textBox" type="text">
+
+                </div>
+            </section>
         </div>
-        <div>
-          <p class="main-text">
-            HTML, CSS, JavaScript
-            <br />
-            Учебное пособие для начинающих
-          </p>
+
+        <div class="main-content">
+            <div class="info-about-guides">
+                <!-- Информация о HTML -->
+                <section class="section">
+                    <div class="container">
+                        <div class="columns">
+                            <!-- Элемент сетки с текстом -->
+                            <div class="column">
+                                <p class="content">
+                                    <b>HTML</b> - это язык разметки, используемый для создания
+                                    веб-страниц. Он определяет структуру содержимого страницы, такую как заголовки,
+                                    параграфы и изображения, с помощью тегов. Браузеры интерпретируют HTML и отображают
+                                    веб-страницы в соответствии с ее структурой.
+                                </p>
+                                <a href="#">Ссылка на HTML</a>
+                            </div>
+                            <!-- Элемент сетки с фотографией -->
+                            <div class="column">
+                                <figure class="image">
+                                    <img src="img/HTML.png" alt="HTML-label-logo" class="guide-image">
+                                </figure>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <hr class="horizontal-line">
+                <section class="section">
+                    <div class="container">
+                        <div class="columns">
+                            <!-- Элемент сетки с фотографией -->
+                            <div class="column">
+                                <figure class="image">
+                                    <img src="img/CSS.png" alt="CSS-label-logo" class="guide-image">
+                                </figure>
+                            </div>
+                            <!-- Элемент сетки с текстом -->
+                            <div class="column">
+                                <p class="content">
+                                    <b>CSS</b> - это язык стилей, который определяет внешний вид и
+                                    оформление элементов на веб-странице. С помощью CSS можно задавать цвета, шрифты,
+                                    отступы, размеры и расположение элементов, чтобы придать странице желаемый внешний
+                                    вид и стиль. Браузеры интерпретируют CSS и применяют стили к элементам в
+                                    соответствии с заданными правилами.
+                                </p>
+                                <a href="#">Ссылка на CSS</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <hr class="horizontal-line">
+                <section class="section">
+                    <div class="container">
+                        <div class="columns">
+                            <!-- Элемент сетки с текстом -->
+                            <div class="column">
+                                <p class="content">
+                                    <b>JavaScript</b> - это язык программирования, который добавляет интерактивность на
+                                    веб-страницы. Он позволяет создавать динамические элементы, обрабатывать события
+                                    пользователя и взаимодействовать с содержимым страницы. Браузеры выполняют
+                                    JavaScript для создания динамических и
+                                    интерактивных функций на веб-страницах.
+                                </p>
+                                <a href="#">Ссылка на JS</a>
+                            </div>
+                            <!-- Элемент сетки с фотографией -->
+                            <div class="column">
+                                <figure class="image">
+                                    <img src="img/JS.png" alt="JS-label-logo" class="guide-image">
+                                </figure>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
         </div>
-        <div>
-          <input class="textBox" type="text" />
-        </div>
-      </section>
     </main>
-    <footer></footer>
-  </body>
+
+    <!-- Футер с нужной информацией -->
+
+    <footer class="footer-bs">
+
+    </footer>
+</body>
+
 </html>
