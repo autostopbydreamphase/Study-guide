@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +11,24 @@
 
 <body>
     <!-- Расположить навигационную панель в правильном стиле -->
-    <header> 
-        <div class="logo-container">
+    <header>
+        <div class="logo-container"> <!-- Обернули логотип и название в div с классом logo-container -->
             <a href="#">
                 <img src="img/logo.jpg" alt="website-logo" class="test-icon">
-                <span>website-name</span>
+                <span class="website-name">website-name</span>
             </a>
         </div>
-        <nav>
-            <ul class="button-list">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
+        <nav class="navbar-button">
+            <ul class="button-list"> <!-- Добавили класс для списка кнопок -->
+                <li>
+                    <a href="#">HTML</a>
+                </li>
+                <li>
+                    <a href="#">CSS</a>
+                </li>
+                <li>
+                    <a href="#">JavaScript</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -48,9 +55,7 @@
                                     параграфы и изображения, с помощью тегов. Браузеры интерпретируют HTML и отображают
                                     веб-страницы в соответствии с ее структурой.
                                 </p>
-                                <div class="buttons">
-                                    <a href="#">Ссылка на HTML</a>
-                                </div>
+                                <a href="#">Ссылка на HTML</a>
                             </div>
                             <!-- Элемент сетки с фотографией -->
                             <div class="column">
@@ -81,9 +86,7 @@
                                     вид и стиль. Браузеры интерпретируют CSS и применяют стили к элементам в
                                     соответствии с заданными правилами.
                                 </p>
-                                <div class="buttons">
-                                    <a href="#">Ссылка на CSS</a>
-                                </div>
+                                <a href="#">Ссылка на CSS</a>
                             </div>
 
                         </div>
@@ -102,9 +105,7 @@
                                     JavaScript для создания динамических и
                                     интерактивных функций на веб-страницах.
                                 </p>
-                                <div class="buttons">
-                                    <a href="#">Ссылка на JS</a>
-                                </div>
+                                <a href="#">Ссылка на JS</a>
                             </div>
                             <!-- Элемент сетки с фотографией -->
                             <div class="column">
@@ -155,13 +156,13 @@
                         <li><a href="#">GitHub</a></li>
                         <li><a href="#">Twitter</a></li>
                         <li><a href="#">Instagram</a></li>
-                        
+
                     </ul>
                 </div>
                 <div class="col-md-3 footer-ns animated fadeInRight">
                     <h4>Какая нибудь инфа</h4>
                     <p>Здесь можем добавить доп инфу ( по типу наших GitHub или что захотим)</p>
-                    
+
                 </div>
             </div>
             <section style="text-align:center; margin:10px auto;">
@@ -170,4 +171,5 @@
         </div>
     </footer>
 </body>
+
 </html>

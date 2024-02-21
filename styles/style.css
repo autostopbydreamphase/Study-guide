@@ -1,5 +1,8 @@
-/* Стили для ссылок на шрифты: импортируют шрифт Montserrat для использования на веб-сайте. */
+/* Ссылки на шрифты */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+/* Основные переменные */
 
 /* Определение основных переменных: устанавливают основные цвета и градиент для веб-сайта. */
 :root {
@@ -26,21 +29,23 @@ html, body {
 }
 /* Стилистика навбара: определяют внешний вид навигационного меню. */
 header {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center;
-  background-color: var(--bg-color);
-  padding: 10px 20px;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 10px 20px;
+  }
+
 .main-content {
-    min-height: calc(100% - 100px); /* Оставляем место для футера (100px) */
-    padding-bottom: 100px; /* Выравнивание содержимого относительно футера */
+    min-height: calc(100% - 100px); 
+    padding-bottom: 0px; 
     box-sizing: border-box;
 }
+
 /* Стилизация навбара */
 
 .guide-image {
-    width: 270px;
+    width: 285px;
 }
 
 /* Стилизация блока  */
@@ -56,10 +61,11 @@ header {
 
 .columns {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1250px;
+    max-height: 450px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 150px 150px;
+    grid-template-rows: 350px 350px;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
     justify-items: center;
@@ -74,7 +80,7 @@ header {
     color: black;
     text-align: left;
 }
-/* Контейнер для логотипа: устанавливает расположение логотипа в навбаре. */
+/* Контейнер для логотипа: устанавливает расположение логотипа в навбаре.*/
 .logo-container {
   display: flex; 
   align-items: center; 
@@ -161,7 +167,7 @@ nav ul li a {
 /* Цвет вертикальной полосы для кнопки JavaScript */
 .button-list li:nth-child(3) a::before {
   background-color: #d3d61c;
-}
+} 
 
 
 footer {
@@ -175,9 +181,7 @@ footer {
     width: 100%; 
     background-color: #3c3d41;
     padding: 60px 40px; 
-    border-bottom-right-radius: 6px; 
     border-top-left-radius: 0px; 
-    border-bottom-left-radius: 6px; 
 }
 
 /* Стили для разделов внутри футера: определяют внешний вид и структуру разделов. */
@@ -303,4 +307,132 @@ footer {
     .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns {
         border-left: solid 1px rgba(255,255,255,0.10); 
     }
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px; 
+}
+
+/* Стили для логотипа и названия сайта */
+
+.logo-container {
+  margin-left: 110px;
+  display: flex;
+  align-items: center;
+}
+
+.test-icon {
+  width: 50px;
+  margin-right: 10px; /* Добавлено для отступа между логотипом и текстом */
+}
+
+.website-name {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+}
+
+/* Стили для футера */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #202542;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стили для социальных ссылок в футере */
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #7c4dff;
+}
+
+/* Стили для кнопок */
+
+.button-list
+{
+  margin-right: 110px;
+  margin-top: 10px;
+
+}
+
+.button-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Добавлен отступ между кнопками */
+  margin-left: 62px;
+  
+}
+
+.button-list li a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 21px;
+  position: relative; /* Позволяет позиционировать вертикальную полосу */
+  padding-left: 15px; /* Добавлен отступ слева от текста кнопки */
+}
+
+.button-list li a::before {
+  content: '';
+  position: absolute;
+  top: 50%; /* Положение полосы по середине по вертикали */
+  transform: translateY(-50%); /* Смещение на половину высоты элемента */
+  left: 0;
+  width: 4px; /* Ширина вертикальной полосы */
+  height: 40px;
+  background-color: transparent; /* Цвет по умолчанию */
+}
+
+.button-list li:nth-child(1) a::before {
+  background-color: #db4130; /* Цвет для кнопки HTML */
+}
+
+.button-list li:nth-child(2) a::before {
+  background-color: #188ddb; /* Цвет для кнопки CSS */
+}
+
+.button-list li:nth-child(3) a::before {
+  background-color: #d3d61c; /* Цвет для кнопки JavaScript */
 }
