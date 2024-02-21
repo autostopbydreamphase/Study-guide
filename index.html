@@ -11,20 +11,22 @@
 <body>
     <!-- Расположить навигационную панель в правильном стиле -->
     <header>
-        <a href="#">
-            <img src="img/logo.jpg" alt="website-logo" class="test-icon">
-            <span>website-name</span>
-        </a>
-        <nav>
-            <ul>
+        <div class="logo-container"> <!-- Обернули логотип и название в div с классом logo-container -->
+            <a href="#">
+                <img src="img/logo.jpg" alt="website-logo" class="test-icon">
+                <span class="website-name">STUDY GUIDE</span>
+            </a>
+        </div>
+        <nav class="navbar-button">
+            <ul class="header-button-list"> <!-- Добавили класс для списка кнопок -->
                 <li>
-                    HTML
+                    <a href="#">HTML</a>
                 </li>
                 <li>
-                    CSS
+                    <a href="#">CSS</a>
                 </li>
                 <li>
-                    JavaScript
+                    <a href="#">JavaScript</a>
                 </li>
             </ul>
         </nav>
@@ -38,6 +40,25 @@
 
     <!-- Основная часть сборника -->
     <main>
+        <div class="welcome-section">
+            <section class="logo-quote">
+                <div>
+                    <img class="website-logo" src="img/logo.jpg" alt="website-logo" width="130px">
+                </div>
+                <div>
+                    <p class="main-text">
+                        <font class="HTML-title">HTML</font>, <font class="CSS-title">CSS</font>, <font class="JS-title">JavaScript</font>
+                        <br>
+                        Учебное пособие для начинающих
+                    </p>
+                </div>
+                <div>
+                    <input class="textBox" type="text">
+
+                </div>
+            </section>
+        </div>
+
         <div class="main-content">
             <div class="info-about-guides">
                 <!-- Информация о HTML -->
@@ -52,9 +73,7 @@
                                     параграфы и изображения, с помощью тегов. Браузеры интерпретируют HTML и отображают
                                     веб-страницы в соответствии с ее структурой.
                                 </p>
-                                <div class="buttons">
-                                    <a href="#">Ссылка на HTML</a>
-                                </div>
+                                <a href="#">Ссылка на HTML</a>
                             </div>
                             <!-- Элемент сетки с фотографией -->
                             <div class="column">
@@ -66,7 +85,7 @@
                         </div>
                     </div>
                 </section>
-
+                <hr class="horizontal-line">
                 <section class="section">
                     <div class="container">
                         <div class="columns">
@@ -85,15 +104,13 @@
                                     вид и стиль. Браузеры интерпретируют CSS и применяют стили к элементам в
                                     соответствии с заданными правилами.
                                 </p>
-                                <div class="buttons">
-                                    <a href="#">Ссылка на CSS</a>
-                                </div>
+                                <a href="#">Ссылка на CSS</a>
                             </div>
 
                         </div>
                     </div>
                 </section>
-
+                <hr class="horizontal-line">
                 <section class="section">
                     <div class="container">
                         <div class="columns">
@@ -106,9 +123,7 @@
                                     JavaScript для создания динамических и
                                     интерактивных функций на веб-страницах.
                                 </p>
-                                <div class="buttons">
-                                    <a href="#">Ссылка на JS</a>
-                                </div>
+                                <a href="#">Ссылка на JS</a>
                             </div>
                             <!-- Элемент сетки с фотографией -->
                             <div class="column">
@@ -126,7 +141,8 @@
     </main>
 
     <!-- Футер с нужной информацией -->
-    <footer>
+
+    <footer class="footer-bs">
 
     </footer>
 </body>
