@@ -42,9 +42,11 @@ html::-webkit-scrollbar-thumb {
 .test-icon {
   width: 50px;
 }
+
  main {
   margin: 0 auto;
  }
+
 /* Контейнер с лого и начальным текстом */
 .logo-quote { 
   background: url(../img/body-bg.svg);
@@ -84,12 +86,22 @@ html::-webkit-scrollbar-thumb {
 /* Поле для ввода текста */
 .textBox {
   background-color: rgba(1,1,1,.5);
-  border-radius: 10rem;
+  border-radius: 5rem;
   padding: 1rem;
-  width: 50%;
+  width: 33%;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  text-align:left !important;
+   /* background-size: 10px;
+  background-repeat: no-repeat;
+  outline: none; */
 }
 
-
-.textBox::after {
-  background-image: url(../img/loupe.svg);
-}
+/* #search {
+  width: 20px;
+  background-color: rgba(1,1,1,.5);
+  margin-top: 20px;
+  border: none; 
+  background: url(../img/loupe.svg);
+  background-repeat: no-repeat;
+} */
