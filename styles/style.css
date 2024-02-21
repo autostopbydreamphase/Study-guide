@@ -1,6 +1,7 @@
 /* Ссылки на шрифты */
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
 
 /* Основные переменные */
 
@@ -16,16 +17,22 @@
 }
 
 /* Общие стили: устанавливают общие свойства для всех элементов. */
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
+
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
 }
 
+main {
+  background: #fff;
+}
 html,
 body {
+  background: var(--bg-color);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -41,10 +48,17 @@ body {
 /* Стилизация навбара */
 
 .guide-image {
-  width: 320px;
+  width: 350px;
 }
 
 /* Стилизация блока  */
+
+.container {
+  width: 80%;  
+  margin: 0 auto; /* Центрируем контейнер по горизонтали */
+  padding: 20px; /* Отступы со всех сторон */
+  box-sizing: border-box; /* Учитываем отступы внутри ширины контейнера */
+}
 
 .info-about-guides {
   background-image: url("../img/hexagon.svg");
@@ -55,16 +69,24 @@ body {
 
 /* Стилизация сетки с столбцами */
 
+.horizontal-line {
+  box-shadow: none;
+  background-color: rgba(98, 98, 98, 0.1) ;
+  height: 2px;
+  border: none;
+}
+
 .columns {
   width: 100%;
   max-width: 1250px;
-  max-height: 450px;
+  max-height: 370px;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 350px 350px;
+  grid-template-rows: 390px;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   justify-items: center;
+  align-items: center;
 }
 
 /* Стилизация столбцов в сетке */
@@ -77,8 +99,6 @@ body {
   text-align: left;
 }
 
-
-
 /* Стилистика навбара */
 
 header {
@@ -86,7 +106,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-color);
-  padding: 10px 20px;
+  padding: 20px 15px;
 }
 nav ul {
   display: flex;
@@ -175,4 +195,64 @@ nav ul li a {
 }
 .header-button-list li:nth-child(3) a::before {
   background-color: #d3d61c; /* Цвет для кнопки JavaScript */
+}
+
+/* Кастомный скролл */
+
+html::-webkit-scrollbar {
+  width: 0.27rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10rem;
+}
+
+/* Контейнер с лого и начальным текстом */
+.logo-quote {
+  background: url(../img/body-bg.svg);
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--bg-color);
+  color: #fff;
+  width: auto;
+  padding: 12rem 10rem;
+  text-align: center !important;
+}
+
+/* Лого */
+.website-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+/* Начальный текст */
+.main-text {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.625;
+  font-size: 2.5rem !important; /* При добавлении !important к значению стилевого свойства его важность повышается. Если переопределить значение того же свойства без !important, оно будет игнорироваться. */
+}
+
+/* Поле для ввода текста */
+.textBox {
+  background-color: rgba(1, 1, 1, 0.325);
+  border-radius: 5rem;
+  padding: 1rem;
+  font-size: 1.35em;
+  width: 33%;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  text-align: left !important;
 }
