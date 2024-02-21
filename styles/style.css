@@ -19,6 +19,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 /* Стилистика навбара: определяют внешний вид навигационного меню. */
 header {
   display: flex; 
@@ -27,7 +32,11 @@ header {
   background-color: var(--bg-color);
   padding: 10px 20px;
 }
-
+.main-content {
+    min-height: calc(100% - 100px); /* Оставляем место для футера (100px) */
+    padding-bottom: 100px; /* Выравнивание содержимого относительно футера */
+    box-sizing: border-box;
+}
 /* Стилизация навбара */
 
 .guide-image {
@@ -157,7 +166,6 @@ nav ul li a {
 
 footer {
     color: white; 
-    margin-top: 100px;
 }
 /* Стили для футера: определяют внешний вид и расположение футера на веб-сайте. */
 .footer-bs {
