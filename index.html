@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <title>study-guide</title>
 </head>
 
 <body>
     <!-- Расположить навигационную панель в правильном стиле -->
-    <header>
-        <a href="#">
-            <img src="img/logo.jpg" alt="website-logo" class="test-icon">
-            <span>website-name</span>
-        </a>
+    <header> 
+        <div class="logo-container">
+            <a href="#">
+                <img src="img/logo.jpg" alt="website-logo" class="test-icon">
+                <span>website-name</span>
+            </a>
+        </div>
         <nav>
-            <ul>
-                <li>
-                    HTML
-                </li>
-                <li>
-                    CSS
-                </li>
-                <li>
-                    JavaScript
-                </li>
+            <ul class="button-list">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
             </ul>
         </nav>
     </header>
@@ -126,9 +122,52 @@
     </main>
 
     <!-- Футер с нужной информацией -->
-    <footer>
 
+    <footer class="footer-bs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-brand animated fadeInLeft">
+                    <h2>Название сайта</h2>
+                    <p>Слогам сайта</p>
+                    <p>©Developed 02/20/2024. All rights reserved</p>
+                </div>
+                <div class="col-md-4 footer-nav animated fadeInUp">
+                    <h4>Menu —</h4>
+                    <div class="col-md-6">
+                        <ul class="pages">
+                            <li><a href="#">О сайте</a></li>
+                            <li><a href="#">Ссылка</a></li>
+                            <li><a href="#">Ссылка</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 footer-social animated fadeInDown">
+                    <h4>Сообщества</h4>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-ns animated fadeInRight">
+                    <h4>Какая нибудь инфа</h4>
+                    <p>Здесь можем добавить доп инфу ( по типу наших GitHub или что захотим)</p>
+                    
+                </div>
+            </div>
+            <section style="text-align:center; margin:10px auto;">
+                <p>Designed by <a href="/">название нашей команды</a></p>
+            </section>
+        </div>
     </footer>
 </body>
-
 </html>
