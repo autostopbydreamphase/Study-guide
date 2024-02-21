@@ -10,9 +10,11 @@
   --secondary-color: #0099ff;
   --white-color: #ffffff;
   --bg-color: #202542;
-  --gradient: linear-gradient(var(--secondary-color), var(--main-color));/* Линейный градиент фиолетовый-бирюзовый */
+  --gradient: linear-gradient(
+    var(--secondary-color),
+    var(--main-color)
+  ); /* Линейный градиент фиолетовый-бирюзовый */
 }
-
 
 * {
   margin: 0;
@@ -36,19 +38,12 @@ html::-webkit-scrollbar-thumb {
 
 /* Стилистика навбара */
 
-
-
-
 .test-icon {
   width: 50px;
 }
 
- main {
-  margin: 0 auto;
- }
-
 /* Контейнер с лого и начальным текстом */
-.logo-quote { 
+.logo-quote {
   background: url(../img/body-bg.svg);
   background-blend-mode: soft-light;
   background-repeat: no-repeat;
@@ -57,7 +52,7 @@ html::-webkit-scrollbar-thumb {
   color: #fff;
   width: auto;
   padding: 12rem 10rem;
-  text-align:center !important; 
+  text-align: center !important;
 }
 
 /* Лого */
@@ -82,17 +77,17 @@ html::-webkit-scrollbar-thumb {
   font-size: 2.5rem !important; /* При добавлении !important к значению стилевого свойства его важность повышается. Если переопределить значение того же свойства без !important, оно будет игнорироваться. */
 }
 
-
 /* Поле для ввода текста */
 .textBox {
-  background-color: rgba(1,1,1,.5);
+  background-color: rgba(1, 1, 1, 0.5);
   border-radius: 5rem;
   padding: 1rem;
   width: 33%;
   font-family: "Montserrat", sans-serif;
   color: #fff;
-  text-align:left !important;
-   /* background-size: 10px;
+  text-align: left !important;
+  font-size: 4;
+  /* background-size: 10px;
   background-repeat: no-repeat;
   outline: none; */
 }
