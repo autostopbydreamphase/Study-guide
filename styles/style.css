@@ -54,7 +54,7 @@ body {
 /* Стилизация блока  */
 
 .container {
-  width: 80%;  
+  width: 80%;
   margin: 0 auto; /* Центрируем контейнер по горизонтали */
   padding: 20px; /* Отступы со всех сторон */
   box-sizing: border-box; /* Учитываем отступы внутри ширины контейнера */
@@ -71,7 +71,7 @@ body {
 
 .horizontal-line {
   box-shadow: none;
-  background-color: rgba(98, 98, 98, 0.1) ;
+  background-color: rgba(98, 98, 98, 0.1);
   height: 2px;
   border: none;
 }
@@ -248,7 +248,7 @@ html::-webkit-scrollbar-thumb {
 /* Поле для ввода текста */
 .textBox {
   background-color: rgba(1, 1, 1, 0.325);
-  border-radius: 5rem;
+  border-radius: 1.6rem;
   padding: 1rem;
   font-size: 1.35em;
   width: 33%;
@@ -262,9 +262,33 @@ html::-webkit-scrollbar-thumb {
 }
 
 .CSS-title {
-  color: #4ba2fee5;
+  color: #4ba1fe;
 }
 
 .JS-title {
   color: #f6ff46;
+}
+
+.navbar-button:hover {
+  color: var(--main-color);
+  transition: color 0.3s ease;
+}
+
+.main-content-button {
+  color: white;
+}
+
+.main-button-container {
+  background-color: var(--main-color);
+  max-width: 200px;
+  align-items: center;
+  padding: 10px;
+  margin: 7px;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+
+.main-button-container:hover {
+  background-color: var(--secondary-color);
+  transition: 0.2s ease;
 }
