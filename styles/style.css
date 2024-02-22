@@ -16,8 +16,8 @@
   ); /* Линейный градиент фиолетовый-бирюзовый */
 }
 
-/* Общие стили: устанавливают общие свойства для всех элементов. */
 
+/* Общие стили: устанавливают общие свойства для всех элементов. */
 * {
   margin: 0;
   padding: 0;
@@ -247,6 +247,7 @@ html::-webkit-scrollbar-thumb {
 
 /* Поле для ввода текста */
 .textBox {
+
   background-color: rgba(1, 1, 1, 0.325);
   border-radius: 5rem;
   padding: 1rem;
@@ -255,6 +256,7 @@ html::-webkit-scrollbar-thumb {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   text-align: left !important;
+
 }
 
 .HTML-title {
