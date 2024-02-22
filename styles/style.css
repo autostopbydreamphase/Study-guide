@@ -256,4 +256,17 @@ html::-webkit-scrollbar-thumb {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   text-align: left !important;
+
+}
+
+.HTML-title {
+  color: #ff5757;
+}
+
+.CSS-title {
+  color: #4ba2fee5;
+}
+
+.JS-title {
+  color: #f6ff46;
 }
