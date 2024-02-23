@@ -187,9 +187,9 @@ footer h4 {
     display: block;
     line-height: 58px;
 }
-/* Настройки текста "Наши контакты" */
+/* Настройки текста "Контакты" */
 .footer-contact-info h4 {
-  margin-left: -40px;
+  margin-left: -22px;
   font-size: 17px;
   line-height: normal;
   margin-bottom: 16px;
