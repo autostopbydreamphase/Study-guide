@@ -279,7 +279,7 @@ html::-webkit-scrollbar-thumb {
   color: white;
 }
 
-.main-button-container {
+.main-button-container-HTML {
   background-color: var(--main-color);
   max-width: 200px;
   align-items: center;
@@ -290,7 +290,33 @@ html::-webkit-scrollbar-thumb {
   transition: background-color 0.4s;
 }
 
-.main-button-container:hover {
-  background-color: var(--secondary-color);
-  transition: 0.2s ease;
+.main-button-container-CSS {
+  background-color: var(--main-color);
+  max-width: 200px;
+  align-items: center;
+  padding: 10px;
+  margin: 7px;
+  border-radius: 0.8rem;
+  text-align: center;
+  transition: background-color 0.4s;
+}
+.main-button-container-JS {
+  background-color: var(--main-color);
+  max-width: 200px;
+  align-items: center;
+  padding: 10px;
+  margin: 7px;
+  border-radius: 0.8rem;
+  text-align: center;
+  transition: background-color 0.4s;
+}
+
+.main-button-container-HTML:hover {
+  background-color: #db4025;
+}
+.main-button-container-CSS:hover {
+  background-color: #3e9afc;
+}
+.main-button-container-JS:hover {
+  background-color: #dbde3d;
 }
