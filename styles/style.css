@@ -16,8 +16,8 @@
   ); /* Линейный градиент фиолетовый-бирюзовый */
 }
 
-/* Общие стили: устанавливают общие свойства для всех элементов. */
 
+/* Общие стили: устанавливают общие свойства для всех элементов. */
 * {
   margin: 0;
   padding: 0;
@@ -124,6 +124,102 @@ nav ul li a {
   margin-left: 20px;
   font-size: 18px;
 }
+
+
+
+
+/* Стили для Footer */
+
+footer {
+  
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 65px;
+  margin-left: 250px;
+  margin-right: 215px;
+  color: #bbbbbbd7;
+  font-size: 14px;
+  
+}
+footer h4 {
+  color: #ffffff;
+}
+/* Отступы между частями flex у Footer */
+.item {
+  flex: 1 1 auto;
+  margin: 0 5px;
+}
+
+
+
+/* Текст "STUDY-GUIDE" */
+.footer-info h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+.footer-info hr {
+  border: 1px solid #7979799e;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-inline-end: 195px;
+}
+
+/* Центральная часть футера */
+.footer-contact-info {
+    display: flex;
+}
+/* Настройки отступов и изображений */
+.footer-imgs  {
+  margin-top: 5px;
+}
+.footer-imgs img {
+    display: block;
+    width: 32px;
+    margin-top: 28px;
+    margin-right: 10px;
+    
+}
+
+/* Настройки текста */
+.footer-contact-info-text {
+    display: block;
+    line-height: 58px;
+}
+/* Настройки текста "Контакты" */
+.footer-contact-info h4 {
+  margin-left: -22px;
+  font-size: 17px;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+/* Текст "Беларусь Минск" */
+.location {
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+/* Правая часть футера */
+.about-site {
+    display: block;
+    width: 20%;
+    text-align: left;
+
+}
+.about-site h4 {
+  font-size: 17px;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+
+
+
+
+
+
+
 /* Стили для логотипа и названия сайта */
 .logo-container {
   margin-left: 110px;
@@ -248,6 +344,7 @@ html::-webkit-scrollbar-thumb {
 
 /* Поле для ввода текста */
 .textBox {
+
   background-color: rgba(1, 1, 1, 0.325);
   border-radius: 1.6rem;
   padding: 1rem;
@@ -256,6 +353,7 @@ html::-webkit-scrollbar-thumb {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   text-align: left !important;
+
 }
 
 .HTML-title {
