@@ -129,55 +129,93 @@ nav ul li a {
 
 
 /* Стили для Footer */
+
 footer {
-    display: flex;
-    margin-left: 250px;
-    margin-right: 215px;
-    margin-top: 25px;
-    padding-bottom: 65px;
-    color: #ffffff;
-    font-size: 14px;
-    
+  
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 65px;
+  margin-left: 250px;
+  margin-right: 215px;
+  color: #bbbbbbd7;
+  font-size: 14px;
+  
 }
+footer h4 {
+  color: #ffffff;
+}
+/* Отступы между частями flex у Footer */
+.item {
+  flex: 1 1 auto;
+  margin: 0 5px;
+}
+
+
+
+/* Текст "STUDY-GUIDE" */
+.footer-info h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
+.footer-info hr {
+  border: 1px solid #7979799e;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-inline-end: 195px;
+}
+
+/* Центральная часть футера */
 .footer-contact-info {
     display: flex;
-    /* min-width: 280px;
-    max-width: 280px; */
-    margin-left: 60px;
-    width: 20%;
+}
+/* Настройки отступов и изображений */
+.footer-imgs  {
+  margin-top: 5px;
 }
 .footer-imgs img {
     display: block;
-    width: 33px;
-    margin-bottom: 22px;
+    width: 32px;
+    margin-top: 28px;
     margin-right: 10px;
     
 }
 
-
+/* Настройки текста */
 .footer-contact-info-text {
     display: block;
-    line-height: 57px;
+    line-height: 58px;
 }
-
+/* Настройки текста "Наши контакты" */
+.footer-contact-info h4 {
+  margin-left: -40px;
+  font-size: 17px;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+/* Текст "Беларусь Минск" */
 .location {
     line-height: normal;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
+/* Правая часть футера */
 .about-site {
     display: block;
-    /* width: 450px; */
-    width: 30%;
+    width: 20%;
     text-align: left;
-    margin-left: 120px;
+
+}
+.about-site h4 {
+  font-size: 17px;
+  line-height: normal;
+  margin-bottom: 16px;
 }
 
 
-.footer-info {
-  width: 30%;
-    /* width: 300px; */
-}
+
+
 
 
 
