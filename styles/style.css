@@ -124,6 +124,64 @@ nav ul li a {
   margin-left: 20px;
   font-size: 18px;
 }
+
+
+
+
+/* Стили для Footer */
+footer {
+    display: flex;
+    margin-left: 250px;
+    margin-right: 215px;
+    margin-top: 25px;
+    padding-bottom: 65px;
+    color: #ffffff;
+    font-size: 14px;
+    
+}
+.footer-contact-info {
+    display: flex;
+    /* min-width: 280px;
+    max-width: 280px; */
+    margin-left: 60px;
+    width: 20%;
+}
+.footer-imgs img {
+    display: block;
+    width: 33px;
+    margin-bottom: 22px;
+    margin-right: 10px;
+    
+}
+
+
+.footer-contact-info-text {
+    display: block;
+    line-height: 57px;
+}
+
+.location {
+    line-height: normal;
+    margin-bottom: 12px;
+}
+
+.about-site {
+    display: block;
+    /* width: 450px; */
+    width: 30%;
+    text-align: left;
+    margin-left: 120px;
+}
+
+
+.footer-info {
+  width: 30%;
+    /* width: 300px; */
+}
+
+
+
+
 /* Стили для логотипа и названия сайта */
 .logo-container {
   margin-left: 110px;
