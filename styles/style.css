@@ -17,7 +17,6 @@
 }
 
 /* Общие стили: устанавливают общие свойства для всех элементов. */
-
 * {
   margin: 0;
   padding: 0;
@@ -124,6 +123,85 @@ nav ul li a {
   margin-left: 20px;
   font-size: 18px;
 }
+
+/* Стили для Footer */
+
+footer {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 65px;
+  margin-left: 250px;
+  margin-right: 215px;
+  color: #bbbbbbd7;
+  font-size: 14px;
+}
+footer h4 {
+  color: #ffffff;
+}
+/* Отступы между частями flex у Footer */
+.item {
+  flex: 1 1 auto;
+  margin: 0 5px;
+}
+
+/* Текст "STUDY-GUIDE" */
+.footer-info h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-info hr {
+  border: 1px solid #7979799e;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-inline-end: 195px;
+}
+
+/* Центральная часть футера */
+.footer-contact-info {
+  display: flex;
+}
+/* Настройки отступов и изображений */
+.footer-imgs {
+  margin-top: 5px;
+}
+.footer-imgs img {
+  display: block;
+  width: 32px;
+  margin-top: 28px;
+  margin-right: 10px;
+}
+
+/* Настройки текста */
+.footer-contact-info-text {
+  display: block;
+  line-height: 58px;
+}
+/* Настройки текста "Контакты" */
+.footer-contact-info h4 {
+  margin-left: -22px;
+  font-size: 17px;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+/* Текст "Беларусь Минск" */
+.location {
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+/* Правая часть футера */
+.about-site {
+  display: block;
+  width: 20%;
+  text-align: left;
+}
+.about-site h4 {
+  font-size: 17px;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
 /* Стили для логотипа и названия сайта */
 .logo-container {
   margin-left: 110px;
@@ -319,4 +397,102 @@ html::-webkit-scrollbar-thumb {
 }
 .main-button-container-JS:hover {
   background-color: #dbde3d;
+}
+
+.delimiting-info {
+  background: url(../img/body-bg.svg);
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-color: var(--bg-color);
+  min-height: 320px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.delimiting-wrapper {
+  padding: 11rem 9.5rem;
+}
+.delimiting-info-container {
+  margin: 0 84px;
+}
+
+.delimiting-text-container {
+  text-align: center;
+  align-items: center;
+  color: var(--white-color);
+}
+
+.delimiting-text-container h1 {
+  padding-bottom: 20px;
+}
+
+.main-input-form {
+  padding: 50px;
+  background-image: url("../img/hexagon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 187%;
+}
+
+.main-input-form-container {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.input-frame-container {
+  background-color: var(--white-color);
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0px 0 1px rgba(10, 10, 10, 0.02);
+  min-height: 200px;
+}
+
+.input-frame {
+  padding: 3rem 1.5rem;
+}
+
+.form-input-frame h2 {
+  color: var(--main-color);
+  margin-bottom: 25px;
+  font-size: 36px;
+  transition: color 0.4s ease;
+}
+
+.input-field-control {
+  padding-right: 1.5rem;
+}
+
+.input-field-control input {
+  font-size: 20px;
+  border: #0000007b solid 1px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+::-webkit-input-placeholder {
+  color: #c3c3c3;
+}
+
+.form-input-frame p {
+  margin-bottom: 20px;
+}
+
+.input-submit {
+  background-color: var(--main-color);
+  font-size: 20px;
+  color: var(--white-color);
+  border: none;
+  border-radius: 15px;
+  padding: 0.8rem 1.6rem;
+  transition: background-color 0.3s ease;
+}
+
+.input-submit:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.input-button {
+  margin-bottom: 10px;
 }
