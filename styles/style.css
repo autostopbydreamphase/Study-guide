@@ -45,18 +45,16 @@ body {
 }
 
 /* Стилизация навбара */
-
 .guide-image {
   width: 350px;
 }
 
 /* Стилизация блока  */
-
 .container {
   width: 80%;
-  margin: 0 auto; /* Центрируем контейнер по горизонтали */
-  padding: 20px; /* Отступы со всех сторон */
-  box-sizing: border-box; /* Учитываем отступы внутри ширины контейнера */
+  margin: 0 auto; 
+  padding: 20px; 
+  box-sizing: border-box; 
 }
 
 .info-about-guides {
@@ -67,7 +65,6 @@ body {
 }
 
 /* Стилизация сетки с столбцами */
-
 .horizontal-line {
   box-shadow: none;
   background-color: rgba(98, 98, 98, 0.1);
@@ -89,7 +86,6 @@ body {
 }
 
 /* Стилизация столбцов в сетке */
-
 .column {
   padding: 20px;
   font-size: 22px;
@@ -99,7 +95,6 @@ body {
 }
 
 /* Стилистика навбара */
-
 header {
   display: flex;
   justify-content: space-between;
@@ -125,7 +120,6 @@ nav ul li a {
 }
 
 /* Стили для Footer */
-
 footer {
   display: flex;
   padding-top: 25px;
@@ -135,9 +129,11 @@ footer {
   color: #bbbbbbd7;
   font-size: 14px;
 }
+
 footer h4 {
   color: #ffffff;
 }
+
 /* Отступы между частями flex у Footer */
 .item {
   flex: 1 1 auto;
@@ -161,10 +157,12 @@ footer h4 {
 .footer-contact-info {
   display: flex;
 }
+
 /* Настройки отступов и изображений */
 .footer-imgs {
   margin-top: 5px;
 }
+
 .footer-imgs img {
   display: block;
   width: 32px;
@@ -177,6 +175,7 @@ footer h4 {
   display: block;
   line-height: 58px;
 }
+
 /* Настройки текста "Контакты" */
 .footer-contact-info h4 {
   margin-left: -22px;
@@ -184,6 +183,7 @@ footer h4 {
   line-height: normal;
   margin-bottom: 16px;
 }
+
 /* Текст "Беларусь Минск" */
 .location {
   line-height: normal;
@@ -196,6 +196,7 @@ footer h4 {
   width: 20%;
   text-align: left;
 }
+
 .about-site h4 {
   font-size: 17px;
   line-height: normal;
@@ -208,36 +209,24 @@ footer h4 {
   display: flex;
   align-items: center;
 }
+
 .test-icon {
   width: 50px;
-  margin-right: 10px; /* Добавлено для отступа между логотипом и текстом */
+  margin-right: 10px; 
 }
+
 .website-name {
   color: white;
   font-size: 20px;
   display: flex;
   align-items: center;
 }
+
 .logo-container a {
   display: flex;
   align-items: center;
 }
-/* Стили для социальных ссылок в футере */
-.social-links {
-  display: flex;
-  justify-content: center;
-}
-.social-links a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 18px;
-  transition: color 0.4s ease;
-}
-.social-links a:hover {
-  color: #7c4dff;
-  transition: 0.2s ease;
-}
+
 /* Стили для кнопок */
 .header-button-list {
   margin-right: 110px;
@@ -246,7 +235,7 @@ footer h4 {
 .header-button-list li {
   display: flex;
   align-items: center;
-  margin-bottom: 10px; /* Добавлен отступ между кнопками */
+  margin-bottom: 10px; 
   margin-left: 62px;
 }
 .header-button-list li a {
@@ -254,26 +243,28 @@ footer h4 {
   text-decoration: none;
   font-size: 21px;
   position: relative; /* Позволяет позиционировать вертикальную полосу */
-  padding-left: 15px; /* Добавлен отступ слева от текста кнопки */
+  padding-left: 15px; 
 }
 .header-button-list li a::before {
   content: "";
   position: absolute;
-  top: 50%; /* Положение полосы по середине по вертикали */
-  transform: translateY(-50%); /* Смещение на половину высоты элемента */
+  top: 50%; 
+  transform: translateY(-50%);
   left: 0;
-  width: 4px; /* Ширина вертикальной полосы */
+  width: 4px; 
   height: 40px;
   background-color: transparent; /* Цвет по умолчанию */
 }
+/* Цвета кнопок в шапке */
 .header-button-list li:nth-child(1) a::before {
-  background-color: #db4130; /* Цвет для кнопки HTML */
+  background-color: #db4130;
+
 }
 .header-button-list li:nth-child(2) a::before {
-  background-color: #188ddb; /* Цвет для кнопки CSS */
+  background-color: #188ddb; 
 }
 .header-button-list li:nth-child(3) a::before {
-  background-color: #d3d61c; /* Цвет для кнопки JavaScript */
+  background-color: #d3d61c; 
 }
 
 /* Кастомный скролл */
@@ -302,6 +293,7 @@ html::-webkit-scrollbar-thumb {
   text-align: center !important;
 }
 
+
 /* Лого */
 .website-logo {
   display: block;
@@ -324,28 +316,78 @@ html::-webkit-scrollbar-thumb {
   font-size: 2.5rem !important; /* При добавлении !important к значению стилевого свойства его важность повышается. Если переопределить значение того же свойства без !important, оно будет игнорироваться. */
 }
 
-/* Поле для ввода текста */
-.textBox {
+
+
+
+
+
+/* Поисковая строка */
+.searching-bar {
+  display: flex;
+  width: 550px;
+  height: 57px;
   background-color: rgba(1, 1, 1, 0.325);
   border-radius: 1.6rem;
-  padding: 1rem;
-  font-size: 1.35em;
-  width: 33%;
+  border-width: 2px;
+  border-style: inset;
+  border-color:#9a9999;
+  border-image: initial;
+  margin: auto;
+}
+/* Поле для ввода текста */
+.searching-bar input{
+  background-color: rgba(0, 0, 0, 0);
+  width: 85%;
+  height: 90%;
+  padding-left: 6px;
+  border: none;
+  margin: auto;
+  outline: 0;
   font-family: "Montserrat", sans-serif;
-  color: #fff;
+  color: #dddddd;
+  font-size: 1.35em;
   text-align: left !important;
 }
 
+/* Лупа для поиска */
+.searching-bar img {
+  padding-top: 14px;
+  padding-right: 18px;
+  width: 27px;
+  height: 27px;
+  border: none;
+  cursor: pointer;
+}
+/* Установка стилей при установке курсора в searching-bar */
+.searching-bar:focus-within {
+  transition-duration: 0.2s;
+  border: 2px #ffffff solid;
+}
+
+
+
+/* Установка стилей при снятии курсора в searching-bar */
+.searching-bar:not(:focus-within) {
+  transition-duration: 0.2s;
+  border-style: inset;
+  border-color:#9a9999;
+  border-image: initial;
+}
+
+
 .HTML-title {
   color: #ff5757;
+  font-weight: 500;
 }
 
 .CSS-title {
   color: #4ba1fe;
+  font-weight: 500;
 }
 
 .JS-title {
   color: #f6ff46;
+  font-weight: 500;
 }
 
 .navbar-button:hover {
