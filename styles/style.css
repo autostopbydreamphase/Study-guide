@@ -54,9 +54,9 @@ body {
 
 .container {
   width: 80%;
-  margin: 0 auto; /* Центрируем контейнер по горизонтали */
-  padding: 20px; /* Отступы со всех сторон */
-  box-sizing: border-box; /* Учитываем отступы внутри ширины контейнера */
+  margin: 0 auto; 
+  padding: 20px; 
+  box-sizing: border-box; 
 }
 
 .info-about-guides {
@@ -210,7 +210,7 @@ footer h4 {
 }
 .test-icon {
   width: 50px;
-  margin-right: 10px; /* Добавлено для отступа между логотипом и текстом */
+  margin-right: 10px; 
 }
 .website-name {
   color: white;
@@ -231,7 +231,7 @@ footer h4 {
 .header-button-list li {
   display: flex;
   align-items: center;
-  margin-bottom: 10px; /* Добавлен отступ между кнопками */
+  margin-bottom: 10px; 
   margin-left: 62px;
 }
 .header-button-list li a {
@@ -239,26 +239,28 @@ footer h4 {
   text-decoration: none;
   font-size: 21px;
   position: relative; /* Позволяет позиционировать вертикальную полосу */
-  padding-left: 15px; /* Добавлен отступ слева от текста кнопки */
+  padding-left: 15px; 
 }
 .header-button-list li a::before {
   content: "";
   position: absolute;
-  top: 50%; /* Положение полосы по середине по вертикали */
-  transform: translateY(-50%); /* Смещение на половину высоты элемента */
+  top: 50%; 
+  transform: translateY(-50%);
   left: 0;
-  width: 4px; /* Ширина вертикальной полосы */
+  width: 4px; 
   height: 40px;
   background-color: transparent; /* Цвет по умолчанию */
 }
+/* Цвета кнопок в шапке */
 .header-button-list li:nth-child(1) a::before {
-  background-color: #db4130; /* Цвет для кнопки HTML */
+  background-color: #db4130;
+
 }
 .header-button-list li:nth-child(2) a::before {
-  background-color: #188ddb; /* Цвет для кнопки CSS */
+  background-color: #188ddb; 
 }
 .header-button-list li:nth-child(3) a::before {
-  background-color: #d3d61c; /* Цвет для кнопки JavaScript */
+  background-color: #d3d61c; 
 }
 
 /* Кастомный скролл */
@@ -287,6 +289,7 @@ html::-webkit-scrollbar-thumb {
   text-align: center !important;
 }
 
+
 /* Лого */
 .website-logo {
   display: block;
@@ -309,47 +312,75 @@ html::-webkit-scrollbar-thumb {
   font-size: 2.5rem !important; /* При добавлении !important к значению стилевого свойства его важность повышается. Если переопределить значение того же свойства без !important, оно будет игнорироваться. */
 }
 
-/* Поле для ввода текста */
-.textBox {
+
+
+
+
+
+/* Поисковая строка */
+.searching-bar {
+  display: flex;
+  width: 550px;
+  height: 57px;
   background-color: rgba(1, 1, 1, 0.325);
   border-radius: 1.6rem;
-  padding-left: 0.9em;
-  font-size: 1.35em;
-  width: 100%;
-  height: 100%;
+  border-width: 2px;
+  border-style: inset;
+  border-color:#9a9999;
+  border-image: initial;
+  margin: auto;
+}
+/* Поле для ввода текста */
+.searching-bar input{
+  background-color: rgba(0, 0, 0, 0);
+  width: 85%;
+  height: 90%;
+  padding-left: 6px;
+  border: none;
+  margin: auto;
+  outline: 0;
   font-family: "Montserrat", sans-serif;
-  color: #fff;
+  color: #dddddd;
+  font-size: 1.35em;
   text-align: left !important;
 }
 
-.searching-bar button {
-  position: absolute;
-  top:25.5%;
-  right: -1.2%;
-  width: 30px;
-  height: 30px;
-  background: url(/img/loupe.svg) rgba(0, 0, 0, 0);
+/* Лупа для поиска */
+.searching-bar img {
+  padding-top: 14px;
+  padding-right: 18px;
+  width: 27px;
+  height: 27px;
   border: none;
   cursor: pointer;
 }
-.searching-bar {
-  position: relative;
-  width: 450px;
-  height: 57px;
-  margin-left: auto;
-  margin-right: auto;
+/* Установка стилей при установке курсора в searching-bar */
+.searching-bar:focus-within {
+  transition-duration: 0.2s;
+  border: 2px #ffffff solid;
 }
+/* Установка стилей при снятии курсора в searching-bar */
+.searching-bar:not(:focus-within) {
+  transition-duration: 0.2s;
+  border-style: inset;
+  border-color:#9a9999;
+  border-image: initial;
+}
+
 
 .HTML-title {
   color: #ff5757;
+  font-weight: 500;
 }
 
 .CSS-title {
   color: #4ba1fe;
+  font-weight: 500;
 }
 
 .JS-title {
   color: #f6ff46;
+  font-weight: 500;
 }
 
 .navbar-button:hover {
