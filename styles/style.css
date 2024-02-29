@@ -258,7 +258,6 @@ footer h4 {
 /* Цвета кнопок в шапке */
 .header-button-list li:nth-child(1) a::before {
   background-color: #db4130;
-
 }
 .header-button-list li:nth-child(2) a::before {
   background-color: #188ddb; 
@@ -293,7 +292,6 @@ html::-webkit-scrollbar-thumb {
   text-align: center !important;
 }
 
-
 /* Лого */
 .website-logo {
   display: block;
@@ -315,11 +313,6 @@ html::-webkit-scrollbar-thumb {
   line-height: 1.625;
   font-size: 2.5rem !important; /* При добавлении !important к значению стилевого свойства его важность повышается. Если переопределить значение того же свойства без !important, оно будет игнорироваться. */
 }
-
-
-
-
-
 
 /* Поисковая строка */
 .searching-bar {
@@ -364,8 +357,6 @@ html::-webkit-scrollbar-thumb {
   border: 2px #ffffff solid;
 }
 
-
-
 /* Установка стилей при снятии курсора в searching-bar */
 .searching-bar:not(:focus-within) {
   transition-duration: 0.2s;
@@ -373,7 +364,6 @@ html::-webkit-scrollbar-thumb {
   border-color:#9a9999;
   border-image: initial;
 }
-
 
 .HTML-title {
   color: #ff5757;
