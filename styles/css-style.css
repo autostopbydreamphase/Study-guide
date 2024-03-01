@@ -1,0 +1,128 @@
+/* Ссылки на шрифты */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+
+/* Основные переменные */
+
+:root {
+  --main-color: #7c4dff;
+  --secondary-color: #0099ff;
+  --white-color: #ffffff;
+  --bg-color: #202542;
+  --gradient: linear-gradient(
+    var(--secondary-color),
+    var(--main-color)
+  ); /* Линейный градиент фиолетовый-бирюзовый */
+}
+
+/* Общие стили: устанавливают общие свойства для всех элементов. */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+/* Кастомный скролл */
+
+html::-webkit-scrollbar {
+    width: 0.27rem;
+  }
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10rem;
+  }
+  /* Стилистика навбара */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 20px 15px;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  nav ul li {
+    margin-left: 20px;
+  }
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+  nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  /* Стили для логотипа и названия сайта */
+.logo-container {
+    margin-left: 110px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .test-icon {
+    width: 50px;
+    margin-right: 10px; 
+  }
+  
+  .website-name {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container a {
+    display: flex;
+    align-items: center;
+  }
+/* Стили для кнопок */
+.header-button-list {
+    margin-right: 110px;
+    margin-top: 10px;
+  }
+  .header-button-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+    margin-left: 62px;
+  }
+  .header-button-list li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 21px;
+    position: relative; /* Позволяет позиционировать вертикальную полосу */
+    padding-left: 15px; 
+  }
+  .header-button-list li a::before {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    left: 0;
+    width: 4px; 
+    height: 40px;
+    background-color: transparent; /* Цвет по умолчанию */
+  }
+  
+  /* Цвета кнопок в шапке */
+  .header-button-list li:nth-child(1) a::before {
+    background-color: #db4130;
+  }
+  .header-button-list li:nth-child(2) a::before {
+    background-color: #188ddb; 
+  }
+  .header-button-list li:nth-child(3) a::before {
+    background-color: #d3d61c; 
+  }
+  .navbar-button:hover {
+    color: var(--main-color);
+    transition: color 0.3s ease;
+  }
