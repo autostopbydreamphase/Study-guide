@@ -88,7 +88,6 @@ body {
 .column {
   padding: 20px;
   font-size: 22px;
-  font-family: "Montserrat", sans-serif;
   color: black;
   text-align: left;
 }
@@ -306,7 +305,6 @@ html::-webkit-scrollbar-thumb {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-family: "Montserrat", sans-serif;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.625;
@@ -335,7 +333,6 @@ html::-webkit-scrollbar-thumb {
   border: none;
   margin: auto;
   outline: 0;
-  font-family: "Montserrat", sans-serif;
   color: #dddddd;
   font-size: 1.35em;
   text-align: left !important;
