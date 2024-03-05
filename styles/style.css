@@ -23,6 +23,7 @@
   list-style: none;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
+  cursor: default;
 }
 
 main {
@@ -360,6 +361,9 @@ html::-webkit-scrollbar-thumb {
   border-color:#9a9999;
   border-image: initial;
 }
+.searching-bar input:hover {
+  cursor:auto;
+}
 
 .HTML-title {
   color: #ff5757;
@@ -379,6 +383,7 @@ html::-webkit-scrollbar-thumb {
 .navbar-button:hover {
   color: var(--main-color);
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .main-content-button {
@@ -496,6 +501,9 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
   padding: 15px;
   margin-bottom: 15px;
+}
+.input-field-control input:hover {
+  cursor: auto;
 }
 
 ::-webkit-input-placeholder {

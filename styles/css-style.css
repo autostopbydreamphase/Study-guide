@@ -112,7 +112,6 @@ main {
   display: flex;
   align-items: center;
 }
-
 .logo-container a {
   display: flex;
   align-items: center;
@@ -159,6 +158,7 @@ main {
 .navbar-button:hover {
   color: var(--main-color);
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .technology-description {
