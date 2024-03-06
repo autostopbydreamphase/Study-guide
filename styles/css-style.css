@@ -23,7 +23,6 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   cursor: default;
@@ -33,11 +32,11 @@
 /* Кастомный скролл */
 p {
   font-size: 1.1em;
- font-weight: 450;
+  font-weight: 450;
 }
 h3 {
   font-size: 1.5em;
-  color: var(--secondary-color);
+  color: #1070E3;
 }
 html::-webkit-scrollbar {
   width: 0.27rem;
@@ -171,7 +170,7 @@ main {
   height: 320px;
   border: none;
   border-radius: 15px;
-  filter: drop-shadow(0px 0px 35px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0px 0px 23px rgba(0, 0, 0, 0.25));
 }
 .technology-description p {
   padding-top: 20px;
@@ -193,7 +192,7 @@ main {
   display: flex;
   width: 370px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: .7rem;
   border: 1.8px #2b2b2b9b solid;
   margin-top: 20px;
@@ -210,6 +209,10 @@ main {
   font-weight: 450;
   text-align: left !important;
   cursor: auto;
+  
+}
+::-webkit-input-placeholder {
+  color: #1616164A;
 }
 
 .searching-bar:focus-within {
@@ -242,65 +245,80 @@ main {
   margin-top: 55px;
 }
 .foundation-item {
-  flex: 1 1 1;
   color: var(--white-color);
   background-color: var(--main-bg-color);
-  width: 27%;
+  width: 29.4%;
   height: 270px;
   border: none;
   border-radius: 15px;
-  filter: drop-shadow(0px 0px 35px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0px 0px 23px rgba(0, 0, 0, 0.25));
 }
 .foundation-item p {
   font-size: .95em;
+  padding: 15px;
+  text-align: left;
 }
 .foundation-item img {
   float: left;
-  margin: 0px 4px 0 0;
-  width: 17%;
-}
-.foundation-item p {
-  margin: 7px 7px 7px 0;
-  text-align: left;
+  width: 18%;
+  padding-right: 8px;
+  padding-bottom: 5px;
+  margin-bottom: -10px
+  
 }
 .content {
   display: flex;
   margin-top: 55px;
+  padding-left: 66px;
   color: var(--white-color);
   background-color: var(--main-bg-color);
-  width: 100%;
-  height: 500px;
+  max-width: 100%;
+  height: 600px;
   border: none;
   border-radius: 15px;
-  filter: drop-shadow(0px 0px 35px rgba(0, 0, 0, 0.35));
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  filter: drop-shadow(0px 0px 23px rgba(0, 0, 0, 0.25));
+}
+.content a {
+  font-size: 1.05em;
+  font-weight: 500;
 }
 .content h3 {
   margin-top: 25px;
-  margin-left: 20px;
+  margin-left: -3px;
+}
+.content hr {
+  border: 1px solid #7979799e;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 135%;
+  margin-left: -3px;
+  opacity: 35%;
 }
 .content li {
-  display: flex;
-  align-items: center;
+  text-align: left;
   margin-top: 10px;
   margin-left: 20px;
 }
-.content li::before {
-  margin-right: 10px;
-  content: counter(item) ".";
-  counter-increment: item;
-}
+
 .content ol {
-  list-style-position: inside;
-  counter-reset: item;
+
+  list-style: decimal !important;
+  list-style-type: decimal !important;
 }
-.content-link {
+.content ol li {
+  text-indent: 15px; 
+}
+.content ol li a {
   color: var(--main-color);
 }
-.content-link:hover {
+.content ol li a:hover {
   color: var(--secondary-color);
   text-decoration: underline;
   cursor: pointer;
 }
+
 /* Стили для Footer */
 footer {
   background-color: var(--header-bg-color);
@@ -309,16 +327,19 @@ footer {
   padding-bottom: 65px;
   width: 65%;
   margin: auto;
-  color: #bbbbbbd7;
   font-size: 14px;
 }
 
 footer h4 {
   color: #ffffff;
 }
+footer p {
+color: #bbbbbbd7;;
+}
 
 /* Отступы между частями flex у Footer */
 .item {
+  color: #bbbbbbd7;
   flex: 1 1 auto;
   margin: 0 5px;
 }
@@ -336,42 +357,6 @@ footer h4 {
   margin-inline-end: 195px;
 }
 
-/* Центральная часть футера */
-.footer-contact-info {
-  display: flex;
-}
-
-/* Настройки отступов и изображений */
-.footer-imgs {
-  margin-top: 5px;
-}
-
-.footer-imgs img {
-  display: block;
-  width: 32px;
-  margin-top: 28px;
-  margin-right: 10px;
-}
-
-/* Настройки текста */
-.footer-contact-info-text {
-  display: block;
-  line-height: 58px;
-}
-
-/* Настройки текста "Контакты" */
-.footer-contact-info h4 {
-  margin-left: -22px;
-  font-size: 17px;
-  line-height: normal;
-  margin-bottom: 16px;
-}
-
-/* Текст "Беларусь Минск" */
-.location {
-  line-height: normal;
-  margin-bottom: 10px;
-}
 
 /* Правая часть футера */
 .about-site {
