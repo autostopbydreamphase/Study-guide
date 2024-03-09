@@ -1,2 +1,2 @@
 # Study-guide
-Website for basic information on JS and HTML
+Website for basic information on JS, HTML and CSS
