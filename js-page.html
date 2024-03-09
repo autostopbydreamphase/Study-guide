@@ -2,55 +2,115 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/js-style.css" />
-    <title>JS-guide</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/js-style.css" />
+  <title>JS-guide</title>
 </head>
 
 <body>
-    <!-- Хедер с навигационной панелью -->
-    <header>
-        <div class="logo-container">
-            <!-- Обернули логотип и название в div с классом logo-container -->
-            <a href="index.html" class="navbar-button">
-              <img src="img/logo.jpg" alt="website-logo" class="test-icon" />
-              <span class="website-name navbar-button">STUDY GUIDE</span>
-            </a>
+  <!-- Хедер с навигационной панелью -->
+  <header>
+    <div class="logo-container">
+      <!-- Обернули логотип и название в div с классом logo-container -->
+      <a href="#" class="navbar-button">
+        <img src="img/logo.jpg" alt="website-logo" class="test-icon" />
+        <span><a href="index.html" class="website-name navbar-button">STUDY GUIDE</a></span>
+      </a>
+    </div>
+  </header>
+  <!-- Панель помогающая в навигации на странице -->
+  <aside></aside>
+  <!-- Основная секция страницы -->
+  <main>
+    <div class="main-info">
+      <section class="technology-description">
+        <div class="tech-info">
+          <h3>JavaScript</h3>
+          <p>
+            JavaScript - это язык программирования, который используется для создания интерактивных и динамических
+            элементов на веб-страницах. Он предоставляет возможность добавлять функциональность к веб-документам,
+            взаимодействовать с пользователем, изменять содержимое страницы, и обрабатывать события
+          </p>
+          <div class="searching-bar">
+            <input type="text" placeholder="Поиск по подтемам..." />
+            <button></button>
           </div>
-          <nav class="navbar-buttons">
-            <ul class="header-button-list">
-              <!-- Добавили класс для списка кнопок -->
-              <li>
-                <a href="html-page.html" class="navbar-button">HTML</a>
-              </li>
-              <li>
-                <a href="css-page.html" class="navbar-button">CSS</a>
-              </li>
-              <li>
-                <a href="#" class="navbar-button">JavaScript</a>
-              </li>
-            </ul>
-          </nav>
-    </header>
-    <!-- Активные скрипты -->
-    <script></script>
-    <!-- Панель помогающая в навигации на странице -->
-    <aside>
-
-    </aside>
-    <!-- Основная секция страницы -->
-    <main>
-
-    </main>
-    <!-- Интерактивная часть -->
-    <section>
-
+        </div>
+        <img src="img/JS.png" alt="technology-photo" />
+      </section>
+      <section class="foundation-info">
+        <div class="first-square foundation-item">
+          <p>
+            <img src="img/tools.png" alt="" />основополагающая информация о
+            технологии, которая как-то косвенно связана с картиночкой
+          </p>
+        </div>
+        <div class="second-square foundation-item">
+          <p>
+            <img src="img/thin-client.png" alt="" />основополагающая информация
+            о технологии, которая как-то косвенно связана с картиночкой
+          </p>
+        </div>
+        <div class="third-square foundation-item">
+          <p>
+            <img src="img/module.png" alt="" />основополагающая информация о
+            технологии, которая как-то косвенно связана с картиночкой
+          </p>
+        </div>
+      </section>
+      <section class="content">
+        <div class="content-block">
+          <h3>Оглавление</h3>
+          <hr>
+          <ol start="1" type="1">
+            <li><a href="">Работа с элементами объекта браузера средствами JavaScript</a></li>
+            <li>
+              <a href="">Обработка событий браузера</a>
+            </li>
+            <li><a href="">Значения и типы в JavaScript</a></li>
+            <li><a href="">Значения и операторы в JavaScript</a></li>
+            <li><a href="">Структура программы в JavaScript</a></li>
+            <li>
+              <a href="">Использование функций при процедурном подходе в программировании JavaScript</a>
+            </li>
+            <li>
+              <a href="">Использование объектных типо в JavaScript</a>
+            </li>
+            <li>
+              <a href="">Создание массивов в JavaScript</a>
+            </li>
+            <li>
+              <a href="">Обработка массивов в JavaScript</a>
+            </li>
+          </ol>
+          <hr>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- Интерактивная часть -->
+  <section></section>
+  <!-- Обычный футтер (без информации про колледж и тп) -->
+  <footer>
+    <div class="footer-info item">
+      <h4>STUDY-GUIDE</h4>
+      <p>Основные разделы | О сайте</p>
+      <hr>
+      <p>Год создания &copy; 2024</p>
+      <p>Группа разработчиков</p>
+      <p>Все права защищены</p>
+    </div>
+    <section class="about-site item">
+      <p>
+      <h4>Для чего нужен наш справочник?</h4> Справочник HTML, CSS и JavaScript - ваш надежный источник знаний о
+      веб-разработке. Мы стремимся предоставить вам обширную базу знаний, необходимую для создания красивых и
+      функциональных веб-приложений. Наша цель - сделать процесс изучения и использования технологий
+      веб-разработки максимально простым и доступным.</p>
     </section>
-    <!-- Обычный футтер (без информации про колледж и тп) -->
-    <footer>
-
-    </footer>
+  </footer>
+  <!-- Активные скрипты -->
+  <script></script>
 </body>
 
 </html>

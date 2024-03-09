@@ -269,7 +269,8 @@ main {
 .content {
   display: flex;
   margin-top: 55px;
-  padding-left: 66px;
+  padding: 66px;
+  padding-top: 10px;
   color: var(--white-color);
   background-color: var(--main-bg-color);
   max-width: 100%;
@@ -284,6 +285,10 @@ main {
   font-size: 1.05em;
   font-weight: 500;
 }
+
+.content-block {
+  width: 100%;
+}
 .content h3 {
   margin-top: 25px;
   margin-left: -3px;
@@ -292,7 +297,7 @@ main {
   border: 1px solid #7979799e;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 135%;
+  width: 100%;
   margin-left: -3px;
   opacity: 35%;
 }
@@ -369,4 +374,7 @@ color: #bbbbbbd7;;
   font-size: 17px;
   line-height: normal;
   margin-bottom: 16px;
+}
+.tech-info {
+  padding-bottom: 30px;
 }
