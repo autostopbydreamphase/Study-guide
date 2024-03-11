@@ -18,6 +18,9 @@
     var(--main-color)
   ); /* Линейный градиент фиолетовый-бирюзовый */
 }
+html {
+  width: auto;
+}
 
 /* Общие стили: устанавливают общие свойства для всех элементов. */
 * {
@@ -196,10 +199,9 @@ footer {
   background-color: var(--header-bg-color);
   display: flex;
   padding-top: 25px;
-  padding-bottom: 65px;
   width: 65%;
+  height: 300px;
   margin: auto;
-  margin-left: 20%;
   font-size: 14px;
 
 }
