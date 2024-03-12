@@ -8,7 +8,6 @@ if (leftElements.length > 0 && rightElements.length > 0) {
     reset: true,
   });
 
-  // Применяем анимацию к элементам
   sr.reveal(".left", { delay: 200, origin: "right" });
   sr.reveal(".right", { delay: 200, origin: "left" });
 }
