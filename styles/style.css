@@ -325,6 +325,7 @@ html::-webkit-scrollbar-thumb {
   border-image: initial;
   margin: auto;
 }
+
 /* Поле для ввода текста */
 .searching-bar input{
   background-color: rgba(0, 0, 0, 0);
@@ -348,6 +349,7 @@ html::-webkit-scrollbar-thumb {
   border: none;
   cursor: pointer;
 }
+
 /* Установка стилей при установке курсора в searching-bar */
 .searching-bar:focus-within {
   transition-duration: 0.2s;

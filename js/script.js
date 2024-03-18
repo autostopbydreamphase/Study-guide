@@ -1,15 +1,21 @@
 var leftElements = document.querySelectorAll(".left");
 var rightElements = document.querySelectorAll(".right");
-if (leftElements.length > 0 && rightElements.length > 0) {
+var subscribeFormElement = document.querySelectorAll(".subscribe-form");
+if (
+  leftElements.length > 0 &&
+  rightElements.length > 0 &&
+  subscribeFormElement.length > 0
+) {
   window.sr = ScrollReveal({
     distance: "60px",
     duration: 800,
     delay: 200,
-    reset: true,
+    reset: false,
   });
 
-  sr.reveal(".left", { delay: 200, origin: "right" });
-  sr.reveal(".right", { delay: 200, origin: "left" });
+  sr.reveal(".left", { delay: 150, origin: "right" });
+  sr.reveal(".right", { delay: 150, origin: "left" });
+  sr.reveal(".subscribe-form", { delay: 200, origin: "bottom" });
 }
 
 var header = document.querySelector("header");
@@ -37,3 +43,4 @@ if (header && sidebar && footer) {
     }
   });
 }
+
