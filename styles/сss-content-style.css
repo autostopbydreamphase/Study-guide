@@ -181,6 +181,10 @@ main {
   margin-top: 50px;
   padding-bottom: 30px;
   padding-top: 15px;
+  padding-right: 25px;
+}
+.content-text p{
+  white-space: pre-wrap;
 }
 .test {
   background-color: #ffffff;
@@ -249,3 +253,7 @@ color: #bbbbbbd7;;
 .tech-info {
   padding-bottom: 30px;
 }
+
+/* .theme-text {
+    width: 100%;
+} */
