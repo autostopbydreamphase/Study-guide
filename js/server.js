@@ -16,12 +16,13 @@ fetch(url)
     console.log(typeof rows);
 
     const content = document.querySelector(".content-text");
-    const infoForTheme = document.querySelector(".info-for-theme1");
+    const asideThemes = document.querySelector(".nav-panel");
     let counterOfH = 0;
     let counterOfP = 0;
-    for (let i = 0; i <= rows.length; i++) {
+    for (let i = 0; i < rows.length; i++) {
       if (i % 2 == 0) {
         content.querySelectorAll(".theme")[counterOfH].textContent = rows[i];
+        asideThemes.querySelectorAll('.aside-theme')[counterOfH].textContent = rows[i];
         counterOfH++;
       } else {
         content.querySelectorAll(".theme-text")[counterOfP].textContent = rows[i];
