@@ -11,8 +11,11 @@ fetch(url)
     const rows = csvData.split('\"\r');
     console.log(rows);
     console.log(typeof(rows));
-    const infoForTheme = document.querySelector('.info-for-theme');
-    infoForTheme.textContent = rows[0];
+    const content = document.querySelector('.content-text');
+    content.querySelectorAll(".theme")[1].textContent = rows[0];
+
+    // content.textContent = rows[0];
+
   })
   .catch(error => {
     console.error('error fetching data:', error);
