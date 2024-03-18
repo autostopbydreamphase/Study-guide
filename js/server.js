@@ -11,15 +11,15 @@ fetch(url)
   .then((csvData) => {
     const separator = /\",|,\"/;
     const rows = csvData.split(separator);
-
     console.log(rows);
     console.log(typeof rows);
-
+    
     const content = document.querySelector(".content-text");
-    const infoForTheme = document.querySelector(".info-for-theme1");
     let counterOfH = 0;
     let counterOfP = 0;
-    for (let i = 0; i <= rows.length; i++) {
+   
+    for (let i = 0; i < rows.length; i++) {
+      
       if (i % 2 == 0) {
         content.querySelectorAll(".theme")[counterOfH].textContent = rows[i];
         counterOfH++;
