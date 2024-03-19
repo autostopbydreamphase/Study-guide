@@ -10,21 +10,26 @@ fetch(url)
   })
   .then((csvData) => {
     const separator = /\",|,\"/;
+
+    console.log(csvData);
     const rows = csvData.split(separator);
+
     console.log(rows);
     console.log(typeof rows);
-    
+
     const content = document.querySelector(".content-text");
     const asideThemes = document.querySelector(".nav-panel");
     let counterOfH = 0;
     let counterOfP = 0;
-    for (let i = 0; i < rows.length; i++) {
+    for (let i = 8; i < 16; i++) {
       if (i % 2 == 0) {
         content.querySelectorAll(".theme")[counterOfH].textContent = rows[i];
-        asideThemes.querySelectorAll('.aside-theme')[counterOfH].textContent = rows[i];
+        asideThemes.querySelectorAll(".aside-theme")[counterOfH].textContent =
+          rows[i];
         counterOfH++;
       } else {
-        content.querySelectorAll(".theme-text")[counterOfP].textContent = rows[i];
+        content.querySelectorAll(".theme-text")[counterOfP].textContent =
+          rows[i];
         counterOfP++;
       }
     }
