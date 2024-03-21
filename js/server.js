@@ -10,12 +10,15 @@ fetch(url)
   })
 
   .then((csvData) => {
+
     const separator = /\",|,\"|\"\r\n|,!!|\r\n/;
+
     console.log(csvData);
     const rows = csvData.split(separator);
+
     console.log(rows);
     console.log(typeof rows);
-    
+
     const content = document.querySelector(".content-text");
     const asideThemes = document.querySelector(".nav-panel");
     let counterOfH = 0;
@@ -26,7 +29,8 @@ fetch(url)
         asideThemes.querySelectorAll(".aside-theme")[counterOfH].textContent = rows[i];
         counterOfH++;
       } else {
-        content.querySelectorAll(".theme-text")[counterOfP].textContent = rows[i];
+        content.querySelectorAll(".theme-text")[counterOfP].textContent =
+          rows[i];
         counterOfP++;
       }
     }
