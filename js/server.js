@@ -11,7 +11,8 @@ fetch(url)
   .then((csvData) => {
     const separator = /\",|,\"/;
 
-    console.log(csvData);
+    console.log(csvData); 
+
     const rows = csvData.split(separator);
 
     console.log(rows);
@@ -21,7 +22,7 @@ fetch(url)
     const asideThemes = document.querySelector(".nav-panel");
     let counterOfH = 0;
     let counterOfP = 0;
-    for (let i = 8; i < 16; i++) {
+    for (let i = 4; i < 12; i++) {
       if (i % 2 == 0) {
         content.querySelectorAll(".theme")[counterOfH].textContent = rows[i];
         asideThemes.querySelectorAll(".aside-theme")[counterOfH].textContent =
