@@ -390,3 +390,16 @@ color: #bbbbbbd7;;
 .tech-info {
   padding-bottom: 30px;
 }
+
+.third-square.foundation-item p {
+  text-align: justify;
+  line-height: 22px;
+}
+.first-square.foundation-item p {
+  text-align: justify;
+  line-height: 22px;
+}
+.second-square.foundation-item p {
+  text-align: justify;
+  line-height: 22px;
+}

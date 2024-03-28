@@ -13,7 +13,8 @@ fetch(url)
 
     const separator = /\",|,\"|\"\r\n|,!!|\r\n/;
 
-    console.log(csvData);
+    console.log(csvData); 
+
     const rows = csvData.split(separator);
 
     console.log(rows);
