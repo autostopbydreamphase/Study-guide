@@ -15,6 +15,32 @@ var asideElement = document.getElementById("aside-themes");
 var urlParams = new URLSearchParams(window.location.search);
 var selectedTheme = urlParams.get("theme");
 
+function createResultElements() {
+  if (asideElement != null && contentElement != null) {
+    var asideResultDiv = document.createElement("div");
+
+    var asideResultTitle = document.createElement("li");
+    var asideResultLink = document.createElement("a");
+    var resultDiv = document.createElement("div");
+    var resultId = "итоги";
+    var resultParagraph = document.createElement("p");
+    var resultTitle = document.createElement("h4");
+    asideResultLink.setAttribute("href", "#" + resultId);
+    asideResultDiv.appendChild(asideResultTitle);
+    asideResultTitle.appendChild(asideResultLink);
+    asideResultLink.textContent = "Итоги";
+    asideElement.appendChild(asideResultDiv);
+    asideResultDiv.classList.add("aside-themes");
+    resultDiv.classList.add("themes");
+    resultTitle.setAttribute("id", resultId);
+    resultTitle.textContent = "Итоги";
+    resultDiv.appendChild(resultTitle);
+    resultDiv.appendChild(resultParagraph);
+    resultParagraph.textContent = "Итоги";
+    contentElement.appendChild(resultDiv);
+  }
+}
+
 function updateTheme(theme, themeType) {
   loadJSON(theme + ".json", function (data) {
     contentElement.innerHTML = "";
@@ -25,8 +51,8 @@ function updateTheme(theme, themeType) {
       var themeDiv = document.createElement("div");
       themeDiv.classList.add("theme");
       var titleElement = document.createElement("h4");
-      var id = themeData.title.toLowerCase().replace(/\s+/g, "-"); 
-      titleElement.setAttribute("id", id); 
+      var id = themeData.title.toLowerCase().replace(/\s+/g, "-");
+      titleElement.setAttribute("id", id);
       titleElement.textContent = themeData.title;
       var contentParagraph = document.createElement("p");
       contentParagraph.textContent = themeData.content;
@@ -45,15 +71,7 @@ function updateTheme(theme, themeType) {
       contentElement.appendChild(themeDiv);
       asideElement.appendChild(asideThemesDiv);
     });
-
-    var asideResultDiv = document.createElement("div");
-    asideResultDiv.classList.add("aside-themes");
-    var asideResultTitle = document.createElement("li");
-    var asideResultLink = document.createElement("a");
-    asideResultDiv.appendChild(asideResultTitle);
-    asideResultTitle.appendChild(asideResultLink);
-    asideResultLink.textContent = "Итоги";
-    asideElement.appendChild(asideResultDiv);
+    createResultElements();
   });
 }
 
