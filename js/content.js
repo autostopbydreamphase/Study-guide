@@ -18,7 +18,6 @@ var selectedTheme = urlParams.get("theme");
 function createResultElements() {
   if (asideElement != null && contentElement != null) {
     var asideResultDiv = document.createElement("div");
-
     var asideResultTitle = document.createElement("li");
     var asideResultLink = document.createElement("a");
     var resultDiv = document.createElement("div");
@@ -45,29 +44,26 @@ function updateTheme(theme, themeType) {
   loadJSON(theme + ".json", function (data) {
     contentElement.innerHTML = "";
     asideElement.innerHTML = "";
-
     var themes = data[themeType];
     themes.forEach(function (themeData) {
       var themeDiv = document.createElement("div");
-      themeDiv.classList.add("theme");
       var titleElement = document.createElement("h4");
       var id = themeData.title.toLowerCase().replace(/\s+/g, "-");
-      titleElement.setAttribute("id", id);
-      titleElement.textContent = themeData.title;
       var contentParagraph = document.createElement("p");
-      contentParagraph.textContent = themeData.content;
       var asideThemesDiv = document.createElement("div");
-      asideThemesDiv.classList.add("aside-themes");
       var asideTitle = document.createElement("li");
       var asideLink = document.createElement("a");
+      themeDiv.classList.add("theme");
+      titleElement.setAttribute("id", id);
+      titleElement.textContent = themeData.title;
+      contentParagraph.textContent = themeData.content;
+      asideThemesDiv.classList.add("aside-themes");
       asideLink.setAttribute("href", "#" + id);
       asideThemesDiv.appendChild(asideTitle);
       asideTitle.appendChild(asideLink);
       asideLink.textContent = themeData.title;
-
       themeDiv.appendChild(titleElement);
       themeDiv.appendChild(contentParagraph);
-
       contentElement.appendChild(themeDiv);
       asideElement.appendChild(asideThemesDiv);
     });
