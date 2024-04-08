@@ -118,31 +118,52 @@ main {
 /* Стили для кнопок */
 .header-icons {
   display: flex;
+  margin-top: 20px;
 }
 .header-icons img{
   width: 46px;
   height: 46px;
-  margin-right: 60px;
+
+
+}
+.profile {
+  margin-top: 3px;
+  margin-right: 200px;
+}
+.profile a {
+  color: var(--white-color);
+  margin-left: 10px;
+  margin-top: 20px;
+  font-size: 18px;
+
+}
+.profile a:hover {
+  color: var(--main-color);
+  cursor:pointer;
+
+}
+.profile img {
+  display: none;
 }
 .header-icons img:hover{
   cursor: pointer;
 }
 .theme-switcher{
-  background-image: url(../img/theme-switcher.png); /* Путь к изображению */
-  background-color: transparent; /* Прозрачный цвет фона */
-  background-repeat: no-repeat; /* Запрет повтора фонового изображения */
+  background-image: url(../img/theme-switcher.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   border: none;
-  width: 46px;
-  height: 46px;
-  
+  width: 38px;
+  height: 38px;
 }
 .theme-switcher-drop {
   position: relative;
   display: inline-block;
-  margin-right: 40px;
+  margin-right: 10px;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -157,6 +178,7 @@ main {
   text-decoration: none;
   display: block;
   color: #f6f6f6;
+  
 }
 
 .theme-switcher-drop-content a:hover {background-color: #ddd;}
@@ -402,4 +424,8 @@ color: #bbbbbbd7;;
 .second-square.foundation-item p {
   text-align: justify;
   line-height: 22px;
+}
+.theme-switcher{
+
+
 }
