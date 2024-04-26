@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/html-content-style.css" />
+  <link href="styles/prism-shades-of-purple.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/auth-forms.css">
   <title>HTML-guide</title>
 </head>
 
@@ -12,17 +14,32 @@
   <!-- Хедер с навигационной панелью -->
   <header>
     <div class="logo-container">
-      <!-- Обернули логотип и название в div с классом logo-container -->
       <a href="#" class="navbar-button">
         <img src="img/logo.jpg" alt="website-logo" class="test-icon" />
         <span><a href="index.html" class="website-name navbar-button">STUDY GUIDE</a></span>
       </a>
     </div>
     <div class="controls">
-      
+      <div class="header-icons">
+        <div class="theme-switcher-drop">
+          <button class="theme-switcher" src="img/theme-switcher.svg"></button>
+          <div class="dropdown-content">
+            <a href="#">Светлая</a>
+            <a href="#">Тёмная</a>
+          </div>
+        </div>
+        <div class="profile">
+          <a href="#" onclick="showRegForm('block')">Зарегистрироваться</a>
+          <a href="#" onclick="showLogForm('block')">Войти</a>
+          <img src="img/profile.svg" alt="">
+        </div>
+      </div>
     </div>
   </header>
-  <!-- Панель помогающая в навигации на странице -->
+
+  <section class="log"> </section>
+  <section class="reg"> </section>
+
   <aside>
     <div class="sidebar">
       <section class="nav-panel">
@@ -74,9 +91,10 @@
   </footer>
   <!-- Активные скрипты -->
   <!-- <script src="js/server.js"></script> -->
+  <script src="js/prism.js"></script>
   <script src="js/script.js"></script>
   <script src="js/content.js"></script>
-
+  <script src="js/authorization.js"></script>
 </body>
 
 </html>

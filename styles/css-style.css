@@ -123,8 +123,6 @@ main {
 .header-icons img{
   width: 46px;
   height: 46px;
-
-
 }
 .profile {
   margin-top: 3px;
@@ -216,11 +214,11 @@ main {
 }
 .technology-description img {
   display: block;
-  margin-right: 80px;
+  margin-right: 60px;
   margin-left: 160px;
   margin-top: auto;
   margin-bottom: auto;
-  width: 26.5%;
+  width: 32.5%;
 }
 .searching-bar {
   display: flex;
@@ -424,8 +422,4 @@ color: #bbbbbbd7;;
 .second-square.foundation-item p {
   text-align: justify;
   line-height: 22px;
-}
-.theme-switcher{
-
-
 }

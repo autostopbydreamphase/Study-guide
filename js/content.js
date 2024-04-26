@@ -15,59 +15,46 @@ var asideElement = document.getElementById("aside-themes");
 var urlParams = new URLSearchParams(window.location.search);
 var selectedTheme = urlParams.get("theme");
 
-function createResultElements() {
-  if (asideElement != null && contentElement != null) {
-    var asideResultDiv = document.createElement("div");
-    var asideResultTitle = document.createElement("li");
-    var asideResultLink = document.createElement("a");
-    var resultDiv = document.createElement("div");
-    var resultId = "итоги";
-    var resultParagraph = document.createElement("p");
-    var resultTitle = document.createElement("h4");
-    asideResultLink.setAttribute("href", "#" + resultId);
-    asideResultDiv.appendChild(asideResultTitle);
-    asideResultTitle.appendChild(asideResultLink);
-    asideResultLink.textContent = "Итоги";
-    asideElement.appendChild(asideResultDiv);
-    asideResultDiv.classList.add("aside-themes");
-    resultDiv.classList.add("themes");
-    resultTitle.setAttribute("id", resultId);
-    resultTitle.textContent = "Итоги";
-    resultDiv.appendChild(resultTitle);
-    resultDiv.appendChild(resultParagraph);
-    resultParagraph.textContent = "Итоги";
-    contentElement.appendChild(resultDiv);
-  }
-}
-
 function updateTheme(theme, themeType) {
   loadJSON(theme + ".json", function (data) {
     contentElement.innerHTML = "";
-    asideElement.innerHTML = "";
+    asideElement.innerHTML = ""; 
     var themes = data[themeType];
     themes.forEach(function (themeData) {
       var themeDiv = document.createElement("div");
       var titleElement = document.createElement("h4");
       var id = themeData.title.toLowerCase().replace(/\s+/g, "-");
-      var contentParagraph = document.createElement("p");
-      var asideThemesDiv = document.createElement("div");
-      var asideTitle = document.createElement("li");
-      var asideLink = document.createElement("a");
       themeDiv.classList.add("theme");
       titleElement.setAttribute("id", id);
       titleElement.textContent = themeData.title;
-      contentParagraph.textContent = themeData.content;
-      asideThemesDiv.classList.add("aside-themes");
-      asideLink.setAttribute("href", "#" + id);
-      asideThemesDiv.appendChild(asideTitle);
-      asideTitle.appendChild(asideLink);
-      asideLink.textContent = themeData.title;
       themeDiv.appendChild(titleElement);
-      themeDiv.appendChild(contentParagraph);
+
+      themeData.content.forEach(function (contentBlock) {
+        if (contentBlock.type === "text") {
+          var textElement = document.createElement("p");
+          textElement.textContent = contentBlock.text;
+          themeDiv.appendChild(textElement);
+        } else if (contentBlock.type === "code") {
+          var codeBlock = document.createElement("pre");
+          var codeElement = document.createElement("code");
+          codeElement.textContent = contentBlock.code;
+          codeElement.classList.add("language-" + contentBlock.language); 
+          codeBlock.appendChild(codeElement); 
+          themeDiv.appendChild(codeBlock);
+        }
+      });
       contentElement.appendChild(themeDiv);
-      asideElement.appendChild(asideThemesDiv);
+      var asideResultDiv = document.createElement("div");
+      var asideResultTitle = document.createElement("li");
+      var asideResultLink = document.createElement("a");
+      asideResultLink.setAttribute("href", "#" + id); 
+      asideResultDiv.appendChild(asideResultTitle);
+      asideResultTitle.appendChild(asideResultLink);
+      asideResultLink.textContent = themeData.title;
+      asideElement.appendChild(asideResultDiv);
     });
-    createResultElements();
+
+    Prism.highlightAll();
   });
 }
 

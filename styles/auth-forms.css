@@ -1,0 +1,143 @@
+section .log {
+    padding: 0px;
+  }
+  
+  section .reg {
+    padding: 0px;
+  }
+  
+  #grey-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  #grey-background.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .x-circle {
+    margin: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  #regSection {
+    width: 450px;
+    height: 650px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 50px rgba(235, 235, 235, 0.8);
+    border-radius: 15px;
+    z-index: 150;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.3s ease-in-out;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #regSection.visible {
+    opacity: 1; /* Плавное появление окна */
+    visibility: visible; /* Отображение элемента */
+  }
+  
+  #logSection {
+    width: 450px;
+    height: 520px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 50px rgba(235, 235, 235, 0.8);
+    border-radius: 15px;
+    z-index: 150;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.3s ease-in-out;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #logSection.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  #grey-background-log {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  #grey-background-log.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  #grey-background-reg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  #grey-background-reg.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .auth-form-btn-container {
+    width: 55%;
+    text-align: center;
+    border-radius: 0.75rem;
+    padding: 15px;
+    background-color: var(--main-color);
+    cursor: pointer;
+    margin: 10px auto;
+  }
+  
+  .auth-form-btn-container:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .auth-form-btn {
+    color: var(--main-bg-color);
+  }
+  
+  .logForm {
+    padding: 10px 25px;
+    text-align: center;
+  }
+  
+  .regForm {
+    padding: 10px 25px;
+    text-align: center;
+  }
+  
+  .auth-form-input {
+    padding: 10px 20px;
+    margin: 7px auto;
+    border-radius: 0.4rem;
+    border: 1px solid #ccc;
+    width: 200px;
+  }

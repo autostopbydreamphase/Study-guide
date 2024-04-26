@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/css-style.css" />
+  <link rel="stylesheet" href="styles/auth-forms.css">
   <title>CSS-guide</title>
 </head>
 
@@ -12,7 +13,6 @@
   <!-- Хедер с навигационной панелью -->
   <header>
     <div class="logo-container">
-      <!-- Обернули логотип и название в div с классом logo-container -->
       <a href="#" class="navbar-button">
         <img src="img/logo.jpg" alt="website-logo" class="test-icon" />
         <span><a href="index.html" class="website-name navbar-button">STUDY GUIDE</a></span>
@@ -28,14 +28,17 @@
           </div>
         </div>
         <div class="profile">
-        <a href="#">Зарегистрироваться</ф>
-        <a href="#">Войти</a>
-        <img src="img/profile.svg" alt="">
+          <a href="#" onclick="showRegForm('block')">Зарегистрироваться</a>
+          <a href="#" onclick="showLogForm('block')">Войти</a>
+          <img src="img/profile.svg" alt="">
+        </div>
       </div>
     </div>
-    </div>
   </header>
-  <!-- Панель помогающая в навигации на странице -->
+  
+  <section class="log"> </section>
+  <section class="reg"> </section>
+
   <aside></aside>
   <!-- Основная секция страницы -->
   <main>
@@ -142,7 +145,7 @@
     </section>
   </footer>
   <!-- Активные скрипты -->
-  <script></script>
+  <script src="js/authorization.js"></script>
 </body>
 
 </html>

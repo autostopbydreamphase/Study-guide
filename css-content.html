@@ -1,96 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/сss-content-style.css" />
-    <title>CSS-guide</title>
-  </head>
 
-  <body>
-    <!-- Хедер с навигационной панелью -->
-    <header>
-      <div class="logo-container">
-        <!-- Обернули логотип и название в div с классом logo-container -->
-        <a href="#" class="navbar-button">
-          <img src="img/logo.jpg" alt="website-logo" class="test-icon" />
-          <span
-            ><a href="index.html" class="website-name navbar-button"
-              >STUDY GUIDE</a
-            ></span
-          >
-        </a>
-      </div>
-    </header>
-    <!-- Панель помогающая в навигации на странице -->
-    <aside></aside>
-    <!-- Основная секция страницы -->
-    <main>
-      <section class="guide">
-        <div class="sidebar">
-          <section class="nav-panel">
-            <h4>Урок</h4>
-            <a href="">Название урока</a>
-            <h4>Навигация по уроку</h4>
-            <ul>
-              <li><a href="">Название подтемы</a></li>
-              <li><a href="">Название подтемы</a></li>
-              <li><a href="">Название подтемы</a></li>
-              <li><a href="">Название подтемы</a></li>
-              <li><a href="">Название подтемы</a></li>
-              <!-- Лишние подтемы удалить -->
-              <a href="">Итоги</a>
-            </ul>
-          </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/сss-content-style.css" />
+  <link rel="stylesheet" href="styles/auth-forms.css">
+  <title>CSS-guide</title>
+</head>
+
+<body>
+  <!-- Хедер с навигационной панелью -->
+  <header>
+    <div class="logo-container">
+      <a href="#" class="navbar-button">
+        <img src="img/logo.jpg" alt="website-logo" class="test-icon" />
+        <span><a href="index.html" class="website-name navbar-button">STUDY GUIDE</a></span>
+      </a>
+    </div>
+    <div class="controls">
+      <div class="header-icons">
+        <div class="theme-switcher-drop">
+          <button class="theme-switcher" src="img/theme-switcher.svg"></button>
+          <div class="dropdown-content">
+            <a href="#">Светлая</a>
+            <a href="#">Тёмная</a>
+          </div>
         </div>
-        <section class="content-part">
-          <section class="technology-info">
-            <h4>Название темы</h4>
-            <p><a href="css-page.html">CSS</a>/<a href="">Название темы</a></p>
-          </section>
-          <section class="content-text">
-            <h4>Название подтемы</h4>
-            <pre>Текст подтемы</pre>
-            <h4>Название подтемы</h4>
-            <pre>Текст подтемы</pre>
-            <h4>Название подтемы</h4>
-            <pre>Текст подтемы</pre>
-            <h4>Название подтемы</h4>
-            <pre>Текст подтемы</pre>
-            <h4>Название подтемы</h4>
-            <pre>Текст подтемы</pre>
-            <h4>Итоги</h4>
-            <pre>Обобщение темы</pre>
-          </section>
-          <section class="test"></section>
-        </section>
-      </section>
-    </main>
-    <!-- Интерактивная часть -->
-    <section></section>
-    <!-- Обычный футтер (без информации про колледж и тп) -->
-    <footer>
-      <div class="footer-info item">
-        <h4>STUDY-GUIDE</h4>
-        <p>Основные разделы | О сайте</p>
-        <hr />
-        <p>Год создания &copy; 2024</p>
-        <p>Группа разработчиков</p>
-        <p>Все права защищены</p>
+        <div class="profile">
+          <a href="#" onclick="showRegForm('block')">Зарегистрироваться</a>
+          <a href="#" onclick="showLogForm('block')">Войти</a>
+          <img src="img/profile.svg" alt="">
+        </div>
       </div>
-      <section class="about-site item">
-        <h4>Для чего нужен наш справочник?</h4>
-        <p>
-          Справочник HTML, CSS и JavaScript - ваш надежный источник знаний о
-          веб-разработке. Мы стремимся предоставить вам обширную базу знаний,
-          необходимую для создания красивых и функциональных веб-приложений.
-          Наша цель - сделать процесс изучения и использования технологий
-          веб-разработки максимально простым и доступным.
-        </p>
-      </section>
-    </footer>
-    <!-- Активные скрипты -->
+    </div>
+  </header>
 
-    <script src="js/script.js"></script>
-  </body>
+  <section class="log"> </section>
+  <section class="reg"> </section>
+
+  <!-- Панель помогающая в навигации на странице -->
+  <aside>
+    <div class="sidebar">
+      <section class="nav-panel">
+        <h4>Урок</h4>
+        <a href="">Название урока</a>
+        <h4>Навигация по уроку</h4>
+        <ul id="aside-themes">
+        </ul>
+      </section>
+    </div>
+  </aside>
+  <!-- Основная секция страницы -->
+  <main>
+    <section class="guide">
+      <section class="content-part">
+        <section class="technology-info">
+          <h4>Название темы</h4>
+          <p><a href="css-page.html">CSS</a>/<a href="">Название темы</a></p>
+        </section>
+        <section class="content-text" id="content-text">
+
+        </section>
+        <section class="test"></section>
+      </section>
+    </section>
+  </main>
+  <!-- Интерактивная часть -->
+  <section></section>
+  <!-- Обычный футтер (без информации про колледж и тп) -->
+  <footer>
+    <div class="footer-info item">
+      <h4>STUDY-GUIDE</h4>
+      <p>Основные разделы | О сайте</p>
+      <hr />
+      <p>Год создания &copy; 2024</p>
+      <p>Группа разработчиков</p>
+      <p>Все права защищены</p>
+    </div>
+    <section class="about-site item">
+      <h4>Для чего нужен наш справочник?</h4>
+      <p>
+        Справочник HTML, CSS и JavaScript - ваш надежный источник знаний о
+        веб-разработке. Мы стремимся предоставить вам обширную базу знаний,
+        необходимую для создания красивых и функциональных веб-приложений.
+        Наша цель - сделать процесс изучения и использования технологий
+        веб-разработки максимально простым и доступным.
+      </p>
+    </section>
+  </footer>
+  <!-- Активные скрипты -->
+
+  <script src="js/script.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/authorization.js"></script>
+</body>
+
 </html>

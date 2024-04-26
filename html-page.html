@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/html-style.css" />
+  <link rel="stylesheet" href="styles/auth-forms.css">
   <title>HTML-guide</title>
 </head>
 
@@ -12,14 +13,32 @@
   <!-- Хедер с навигационной панелью -->
   <header>
     <div class="logo-container">
-      <!-- Обернули логотип и название в div с классом logo-container -->
       <a href="#" class="navbar-button">
         <img src="img/logo.jpg" alt="website-logo" class="test-icon" />
         <span><a href="index.html" class="website-name navbar-button">STUDY GUIDE</a></span>
       </a>
     </div>
+    <div class="controls">
+      <div class="header-icons">
+        <div class="theme-switcher-drop">
+          <button class="theme-switcher" src="img/theme-switcher.svg"></button>
+          <div class="dropdown-content">
+            <a href="#">Светлая</a>
+            <a href="#">Тёмная</a>
+          </div>
+        </div>
+        <div class="profile">
+          <a href="#" onclick="showRegForm('block')">Зарегистрироваться</a>
+          <a href="#" onclick="showLogForm('block')">Войти</a>
+          <img src="img/profile.svg" alt="">
+        </div>
+      </div>
+    </div>
   </header>
-  <!-- Панель помогающая в навигации на странице -->
+
+  <section class="log"> </section>
+  <section class="reg"> </section>
+
   <aside></aside>
   <!-- Основная секция страницы -->
   <main>
@@ -43,17 +62,25 @@
       <section class="foundation-info">
         <div class="first-square foundation-item">
           <p>
-            <img src="img/document.png" alt="" /><b>Структура HTML:</b> Обзор основных элементов и тегов HTML, которые формируют структуру веб-страницы. Это включает в себя понимание того, как теги, такие как &lt;head&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt; &lt;/section&gt; и другие, используются для определения различных частей веб-страницы.
+            <img src="img/document.png" alt="" /><b>Структура HTML:</b> Обзор основных элементов и тегов HTML, которые
+            формируют структуру веб-страницы. Это включает в себя понимание того, как теги, такие как &lt;head&gt;,
+            &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt; &lt;/section&gt; и другие,
+            используются для определения различных частей веб-страницы.
           </p>
         </div>
         <div class="second-square foundation-item">
           <p>
-            <img src="img/puzzle.png" alt="" /><b>HTML и Семантика:</b> Понимание семантических элементов HTML и их важности для доступности и SEO. Семантические элементы, такие как &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;figure&gt;, &lt;figcaption&gt; и другие, помогают создавать более понятный и доступный контент.
+            <img src="img/puzzle.png" alt="" /><b>HTML и Семантика:</b> Понимание семантических элементов HTML и их
+            важности для доступности и SEO. Семантические элементы, такие как &lt;nav&gt;, &lt;article&gt;,
+            &lt;section&gt;, &lt;aside&gt;, &lt;figure&gt;, &lt;figcaption&gt; и другие, помогают создавать более
+            понятный и доступный контент.
           </p>
         </div>
         <div class="third-square foundation-item">
           <p>
-            <img src="img/thumbnails.png" alt="" /><b>HTML5:</b> Нововведения и улучшения, внесенные в HTML5, включая новые элементы, атрибуты и API. Это включает в себя новые формы ввода, элементы мультимедиа, такие как &lt;video&gt; и &lt;audio&gt;, а также новые API, такие как Geolocation, Web Storage, Canvas и другие.
+            <img src="img/thumbnails.png" alt="" /><b>HTML5:</b> Нововведения и улучшения, внесенные в HTML5, включая
+            новые элементы, атрибуты и API. Это включает в себя новые формы ввода, элементы мультимедиа, такие как
+            &lt;video&gt; и &lt;audio&gt;, а также новые API, такие как Geolocation, Web Storage, Canvas и другие.
           </p>
         </div>
       </section>
@@ -102,7 +129,7 @@
     </section>
   </footer>
   <!-- Активные скрипты -->
-  <script></script>
+  <script src="js/authorization.js"></script>
 </body>
 
 </html>

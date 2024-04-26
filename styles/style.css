@@ -433,6 +433,16 @@ html::-webkit-scrollbar-thumb {
 .main-button-container-JS:hover {
   background-color: #dbde3d;
 }
+.main-button-container-HTML, a:hover {
+  cursor: pointer;
+
+}
+.main-button-container-CSS, a:hover {
+  cursor: pointer;
+}
+.main-button-container-JS, a:hover {
+  cursor: pointer;
+}
 
 .delimiting-info {
   background: url(../img/body-bg.svg);
