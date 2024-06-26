@@ -257,6 +257,19 @@ main {
   border: 1.8px #2b2b2b9b solid;
 }
 
+.searching-bar {
+  display: flex;
+  width: 370px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.7rem;
+  border: 1.8px #2b2b2b9b solid;
+  margin-top: 20px;
+  margin-left: 66px;
+}
+.searching-bar:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 /* Лупа для поиска */
 .searching-bar button {
   background: url(../img/inversed-loupe.svg);
